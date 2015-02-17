@@ -1,0 +1,41 @@
+// $GRID SETUP
+$grids: 12;
+$gutters: 1/3;
+
+$tab: 740px;
+$desk: 980px;
+$wide: 1220px;
+
+
+
+// $GLOBAL
+* {
+	margin: 0px;
+	padding: 0px;
+	border:none;
+	outline: none;
+}
+header, section, article, aside, nav, footer, .row, .container-common {
+	@extend .clearfix;
+}
+
+
+.row {
+	width: 100%;
+	height: auto;
+	position: relative;
+	@include grid-span(12);
+}
+
+
+.fpd-sidebar {
+	@include grid-span(3,1);
+}
+
+.fpd-product-container {
+	@include grid-span(9,4);
+}
+
+
+
+

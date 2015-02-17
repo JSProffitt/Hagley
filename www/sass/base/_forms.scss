@@ -1,0 +1,148 @@
+
+ form {
+    input, select, textarea {
+        -webkit-appearance: none;
+        -webkit-border-radius: 0;
+        -moz-appearance:none;
+        appearance:none;
+        cursor:pointer;
+        font-family: inherit;
+        color:inherit;
+        
+        width: 100%;
+        border: 1px solid rgba(black, 0.4);
+        background-color: white;
+        outline: none;
+        box-shadow: none;
+        @extend .box-sizing;
+        &:hover, &:focus {border-bottom: 2px solid black;}
+    }
+    
+    input, select {   
+        height: 40px;    
+    }
+
+    textarea {
+        height: 200px;
+        resize: none;
+        overflow: scroll;
+        padding-top:10px;
+    }
+    
+    label {
+        margin-top: 15px;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        text-align: left;
+        position: relative;
+        font-weight:bold;
+        clear:both;
+        display: block;
+        @extend .clearfix;
+    }
+
+    select {padding-left: 8px;}
+
+    input[type="image"] {max-width: 40px;padding: 0px;}
+ 
+    /*---Radio-------------------------------*/
+
+    input[type=radio] {
+        display:none;
+    }
+
+    input[type=radio] + label > p {padding-left:0px!important;}
+    input[type=radio] + label,
+    input[type=radio] + label > p {
+        padding-left:36px;
+        margin-bottom: 15px;
+        height:30px; 
+        width: auto;
+        line-height:30px;
+        background-repeat:no-repeat;
+        background-position: 0 0;
+        text-transform: capitalize;
+        cursor:pointer;
+        display: block;
+        font-weight: bold;
+    }
+
+    input[type=radio]:checked + label,
+    input[type=radio]:checked + label > p  {
+        background-position: 0 -30px;
+    }
+
+    input[type=radio]:checked + label {
+        background-image:url('../images/radio.png');
+        margin-right:15px;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+
+    }
+
+    
+
+    /*---Checkbox----------------------------*/
+
+   input[type=checkbox] {
+        display:none;
+    }
+
+    input[type=checkbox] + label > p {padding-left:0px!important;}
+    input[type=checkbox] + label,
+    input[type=checkbox] + label > p {
+        padding-left:36px;
+        margin-bottom:15px;
+        height:30px;
+        width: auto;
+        line-height:30px;
+        background-repeat:no-repeat;
+        background-position: 0 0;
+        text-transform: capitalize;
+        cursor:pointer;     
+        display: block;
+        font-weight: bold;
+    }
+
+    input[type=checkbox]:checked + label,
+    input[type=checkbox]:checked + label > p {
+        background-position: 0 -30px;
+    }
+
+    input[type=checkbox]:checked + label {
+        background-image:url('../images/checkbox.png');
+        margin-right:15px;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+
+    /*---Submit Button-----------------------*/
+
+    input[type=submit] {
+        @extend a.btn;
+        @extend .box-sizing;
+
+        cursor: pointer;
+        border: none;
+        height: auto;
+        margin-top: 15px;    
+    } // end form-submit
+    
+                
+    ::-webkit-input-placeholder,
+    :-moz-placeholder,
+    ::-moz-placeholder,
+    :-ms-input-placeholder {
+        color: gray;
+    }
+
+} // end of form
+
