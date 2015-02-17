@@ -7857,6 +7857,19 @@ header h1 {
 .fpd-content .chosen-container {
   width: 100% !important;
 }
+.fpd-content .fpd-text-styles i {
+  font-size: 20px;
+  margin-right: 5px;
+}
+.fpd-content .fpd-helper-buttons-wrapper i {
+  font-size: 20px;
+  margin-right: 10px;
+}
+.fpd-content .fpd-helper-buttons-wrapper svg {
+  width: 20px !important;
+  height: 20px !important;
+  margin-right: 10px;
+}
 
 .fpd-product-container {
   height: auto !important;
@@ -8024,7 +8037,6 @@ header h1 {
   resize: none;
   width: 100%;
   height: 65px;
-  font-size: 10px;
   padding: 5px;
 }
 
@@ -8077,7 +8089,7 @@ header h1 {
 }
 
 .fpd-editor-box i {
-  font-size: 12px;
+  font-size: 25px;
 }
 
 /* LAYOUTS */
