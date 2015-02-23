@@ -46,7 +46,7 @@ $insta_load_next = isset($_POST['instaLoadNext']) ? $_POST['instaLoadNext'] : 'L
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">  
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0, minimal-ui"/>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<title>Hagley | Create a Custom Rug</title>
 	<link rel="icon" type="image/png" href="/images/favicon.ico" />
@@ -78,7 +78,7 @@ $insta_load_next = isset($_POST['instaLoadNext']) ? $_POST['instaLoadNext'] : 'L
 
 	    	var yourDesigner = $('#clothing-designer').fancyProductDesigner({
 	    		editorMode: false,
-	    		fonts: ['Arial', 'Fearless', 'Helvetica', 'Times New Roman', 'Verdana', 'Geneva', 'Gorditas'],
+	    		fonts: ['Cursive', 'Arial', 'Fearless', 'Helvetica', 'Times New Roman', 'Verdana', 'Geneva', 'Gorditas'],
 	    		customTextParameters: {colors: false, removable: true, resizable: true, draggable: true, rotatable: true, autoCenter: true, boundingBox: "Base"},
 	    		customImagesParameters: {draggable: true, removable: true, colors: '#000', autoCenter: true, boundingBox: "Base"}
 	    	}).data('fancy-product-designer');
@@ -192,84 +192,228 @@ $insta_load_next = isset($_POST['instaLoadNext']) ? $_POST['instaLoadNext'] : 'L
 	<div class="row row-1">
 
 			<div id="clothing-designer">
-          		<div class="fpd-product" title="Shirt Front" data-thumbnail="images/yellow_shirt/front/preview.png">
-	    			<img src="images/yellow_shirt/front/base.png" title="Base" data-parameters='{"x": 325, "y": 329, "colors": "#d59211", "price": 20}' />
-			  		<img src="images/yellow_shirt/front/shadows.png" title="Shadow" data-parameters='{"x": 325, "y": 329}' />
-			  		<img src="images/yellow_shirt/front/body.png" title="Hightlights" data-parameters='{"x": 322, "y": 137}' />
-			  		<span title="Any Text" data-parameters='{"boundingBox": "Base", "x": 326, "y": 232, "zChangeable": true, "removable": true, "draggable": true, "rotatable": true, "resizable": true, "colors": "#000000"}' >Default Text</span>
-			  		<div class="fpd-product" title="Shirt Back" data-thumbnail="images/yellow_shirt/back/preview.png">
-		    			<img src="images/yellow_shirt/back/base.png" title="Base" data-parameters='{"x": 317, "y": 329, "colors": "Base", "price": 20}' />
-		    			<img src="images/yellow_shirt/back/body.png" title="Hightlights" data-parameters='{"x": 333, "y": 119}' />
-				  		<img src="images/yellow_shirt/back/shadows.png" title="Shadow" data-parameters='{"x": 318, "y": 329}' />
-					</div>
+          		
+				<div class="fpd-product" title="Rug" data-thumbnail="images/rugs/1/rug.png">
+	    			<img src="images/rugs/1/base.png" title="Base" data-parameters='{"x": 375, "y": 295, "colors": "#ededed"}' />
+	    			<img src="images/rugs/1/texture.png" title="Texture" data-parameters='{"x": 375, "y": 295}' />
+	    			<img src="images/rugs/1/border.png" title="Border" data-parameters='{"x": 375, "y": 295}' />
+	    			<img src="images/rugs/1/center.png" title="Center" data-parameters='{"x": 375, "y": 295}' />
+			  		<span title="Any Text" data-parameters='{"boundingBox": "Base", "x": 375, "y": 295, "zChangeable": true, "removable": true, "draggable": false, "rotatable": false, "resizable": false, "colors": "#000000"}' >Enter your name</span>
 				</div>
-          		<div class="fpd-product" title="Sweater" data-thumbnail="images/sweater/preview.png">
-	    			<img src="images/sweater/basic.png" title="Base" data-parameters='{"x": 332, "y": 311, "colors": "#D5D5D5,#990000,#cccccc", "price": 20}' />
-			  		<img src="images/sweater/highlights.png" title="Hightlights" data-parameters='{"x": 332, "y": 311}' />
-			  		<img src="images/sweater/shadow.png" title="Shadow" data-parameters='{"x": 332, "y": 309}' />
-				</div>
-				<div class="fpd-product" title="Scoop Tee" data-thumbnail="images/scoop_tee/preview.png">
-	    			<img src="images/scoop_tee/basic.png" title="Base" data-parameters='{"x": 314, "y": 323, "colors": "#98937f, #000000, #ffffff", "price": 15}' />
-			  		<img src="images/scoop_tee/highlights.png" title="Hightlights" data-parameters='{"x":308, "y": 316}' />
-			  		<img src="images/scoop_tee/shadows.png" title="Shadow" data-parameters='{"x": 308, "y": 316}' />
-			  		<img src="images/scoop_tee/label.png" title="Label" data-parameters='{"x": 314, "y": 140}' />
-				</div>
-				<div class="fpd-product" title="Hoodie" data-thumbnail="images/hoodie/preview.png">
-	    			<img src="images/hoodie/basic.png" title="Base" data-parameters='{"x": 313, "y": 322, "colors": "#850b0b", "price": 40}' />
-			  		<img src="images/hoodie/highlights.png" title="Hightlights" data-parameters='{"x": 311, "y": 318}' />
-			  		<img src="images/hoodie/shadows.png" title="Shadow" data-parameters='{"x": 311, "y": 321}' />
-			  		<img src="images/hoodie/zip.png" title="Zip" data-parameters='{"x": 303, "y": 216}' />
-				</div>
-				<div class="fpd-product" title="Shirt" data-thumbnail="images/shirt/preview.png">
-	    			<img src="images/shirt/basic.png" title="Base" data-parameters='{"x": 327, "y": 313, "colors": "#6ebed5", "price": 10}' />
-	    			<img src="images/shirt/collar_arms.png" title="Collars & Arms" data-parameters='{"x": 326, "y": 217, "colors": "#000000"}' />
-			  		<img src="images/shirt/highlights.png" title="Hightlights" data-parameters='{"x": 330, "y": 313}' />
-			  		<img src="images/shirt/shadow.png" title="Shadow" data-parameters='{"x": 327, "y": 312}' />
-			  		<span title="Any Text" data-parameters='{"boundingBox": "Base", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "colors": "#000000"}' >Default Text</span>
-				</div>
-				<div class="fpd-product" title="Short" data-thumbnail="images/shorts/preview.png">
-	    			<img src="images/shorts/basic.png" title="Base" data-parameters='{"x": 317, "y": 332, "colors": "#81b5eb", "price": 15}' />
-			  		<img src="images/shorts/highlights.png" title="Hightlights" data-parameters='{"x": 318, "y": 331}' />
-			  		<img src="images/shorts/pullstrings.png" title="Pullstrings" data-parameters='{"x": 307, "y": 195, "colors": "#ffffff"}' />
-			  		<img src="images/shorts/midtones.png" title="Midtones" data-parameters='{"x": 317, "y": 332}' />
-			  		<img src="images/shorts/shadows.png" title="Shadow" data-parameters='{"x": 320, "y": 331}' />
-				</div>
-				<div class="fpd-product" title="Basecap" data-thumbnail="images/cap/preview.png">
-	    			<img src="images/cap/basic.png" title="Base" data-parameters='{"x": 318, "y": 311, "colors": "#ededed", "price": 5}' />
-			  		<img src="images/cap/highlights.png" title="Hightlights" data-parameters='{"x": 309, "y": 300}' />
-			  		<img src="images/cap/shadows.png" title="Shadows" data-parameters='{"x": 306, "y": 299}' />
-				</div>
-				<div class="fpd-product" title="Rug" data-thumbnail="images/rug/basic.png">
-	    			<img src="images/rug/basic.png" title="Base" data-parameters='{"x": 318, "y": 400, "colors": "#ededed", "price": 5}' />
-			  		<img src="images/rug/highlights.png" title="Hightlights" data-parameters='{"x": 309, "y": 300}' />
-			  		<img src="images/rug/shadows.png" title="Shadows" data-parameters='{"x": 306, "y": 299}' />
-			  		<span title="Any Text" data-parameters='{"boundingBox": "Base", "x": 326, "y": 232, "zChangeable": true, "removable": true, "draggable": false, "rotatable": false, "resizable": false, "colors": "#000000"}' >Enter your name</span>
+
+				<div class="fpd-product" title="Rug" data-thumbnail="images/rugs/2/rug.png">
+	    			<img src="images/rugs/2/base.png" title="Base" data-parameters='{"x": 375, "y": 295, "colors": "#ededed"}' />
+	    			<img src="images/rugs/2/texture.png" title="Texture" data-parameters='{"x": 375, "y": 295}' />
+	    			<img src="images/rugs/2/border.png" title="Border" data-parameters='{"x": 375, "y": 295}' />
+	    			<img src="images/rugs/2/center.png" title="Center" data-parameters='{"x": 375, "y": 295}' />
+			  		<span title="Any Text" data-parameters='{"boundingBox": "Base", "x": 375, "y": 295, "zChangeable": true, "removable": false, "draggable": false, "rotatable": false, "resizable": false, "colors": "#000000"}' >Enter your name</span>
 				</div>
 				
+			
 
 				<!--/////////////
 				//// DESIGNS ////
 				/////////////////-->
 		  		<div class="fpd-design">
-
-			  		<div class="fpd-category" title="Swirls">
-				  		<img src="images/designs/swirl.png" title="Swirl" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "price": 10, "boundingBox": "Base", "autoCenter": true}' />
-					  	<img src="images/designs/swirl2.png" title="Swirl 2" data-parameters='{"x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "price": 5, "boundingBox": "Base", "autoCenter": true}' />
-					  	<img src="images/designs/swirl3.png" title="Swirl 3" data-parameters='{"x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "autoCenter": true}' />
-					  	<img src="images/designs/heart_blur.png" title="Heart Blur" data-parameters='{"x": 215, "y": 200, "colors": "#bf0200", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "price": 5, "boundingBox": "Base", "autoCenter": true}' />
-					  	<img src="images/designs/converse.png" title="Converse" data-parameters='{"x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "autoCenter": true}' />
-					  	<img src="images/designs/crown.png" title="Crown" data-parameters='{"x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "autoCenter": true}' />
-					  	<img src="images/designs/men_women.png" title="Men hits Women" data-parameters='{"x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+		  			<div class="fpd-category" title="Create Your Family">
+		  				<img src="images/designs/family/baby.png" title="Baby" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+			  			<img src="images/designs/family/boy.png" title="Boy" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+			  			<img src="images/designs/family/boy2.png" title="Boy" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+			  			<img src="images/designs/family/cat.png" title="Cat" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+			  			<img src="images/designs/family/dog.png" title="Dog" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+			  			<img src="images/designs/family/girl.png" title="Girl" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+			  			<img src="images/designs/family/girl2.png" title="Girl" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+			  			<img src="images/designs/family/horse.png" title="Horse" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+			  			<img src="images/designs/family/man.png" title="Working Man" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+			  			<img src="images/designs/family/man2.png" title="Man" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+			  			<img src="images/designs/family/woman.png" title="Working Woman" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+			  			<img src="images/designs/family/woman2.png" title="Woman" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
 			  		</div>
-			  		<div class="fpd-category" title="Retro">
-				  		<img src="images/designs/retro_1.png" title="Retro One" data-parameters='{"x": 210, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "scale": 0.25, "price": 7, "boundingBox": "Base", "autoCenter": true}' />
-					  	<img src="images/designs/retro_2.png" title="Retro Two" data-parameters='{"x": 193, "y": 180, "colors": "#ffffff", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "scale": 0.46, "boundingBox": "Base", "autoCenter": true}' />
-					  	<img src="images/designs/retro_3.png" title="Retro Three" data-parameters='{"x": 240, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "scale": 0.25, "price": 8, "boundingBox": "Base", "autoCenter": true}' />
-					  	<img src="images/designs/heart_circle.png" title="Heart Circle" data-parameters='{"x": 240, "y": 200, "colors": "#007D41", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "scale": 0.4, "boundingBox": "Base", "autoCenter": true}' />
-					  	<img src="images/designs/swirl.png" title="Swirl" data-parameters='{"x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "price": 10, "boundingBox": "Base", "autoCenter": true}' />
-					  	<img src="images/designs/swirl2.png" title="Swirl 2" data-parameters='{"x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "price": 5, "boundingBox": "Base", "autoCenter": true}' />
-					  	<img src="images/designs/swirl3.png" title="Swirl 3" data-parameters='{"x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true}' />
-					  </div>
+			  		<div class="fpd-category" title="Delaware Specific">
+		  				<img src="images/designs/de/Bombay-Hook.png" title="Bombay Hook" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+			  			<img src="images/designs/de/DCAD.png" title="DCAD" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+			  			<img src="images/designs/de/Delaware-Art-Museum.png" title="Delaware Art Museum" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+			  			<img src="images/designs/de/Delaware-Beaches.png" title="Delaware Beaches" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+			  			<img src="images/designs/de/Delaware-Childrens-Museum.png" title="Delaware Childrens Museum" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+			  			<img src="images/designs/de/Delaware-Parks.png" title="Delaware Parks" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+			  			<img src="images/designs/de/Delaware-State-University.png" title="Delaware State University" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+			  			<img src="images/designs/de/Delaware-Technical-and-Community-College.png" title="Delaware Technical and Community College" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+			  			<img src="images/designs/de/Firefly-Festival.png" title="Firefly Festival" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+			  			<img src="images/designs/de/Goldey-Beacom.png" title="Goldey Beacom" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+			  			<img src="images/designs/de/Grand-Opera-House.png" title="Grand Opera House" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />	
+			  			<img src="images/designs/de/Hagley.png" title="Hagley" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+			  			<img src="images/designs/de/Kalmar-Nyckel.png" title="Kalmar Nyckel" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+			  			<img src="images/designs/de/Legislative-Hall-Building.png" title="Legislative Hall Building" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+			  			<img src="images/designs/de/New-Castle-Town-Hall.png" title="New Castle Town Hall" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+			  			<img src="images/designs/de/Pumpkin-Chunkin.png" title="Pumpkin Chunkin" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+			  			<img src="images/designs/de/Rock-Concert.png" title="Rock Concert" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+			  			<img src="images/designs/de/University-of-Delaware.png" title="University of Delaware" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+			  			<img src="images/designs/de/Wesley-College.png" title="Wesley College" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+			  			<img src="images/designs/de/Widener.png" title="Widener" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+			  			<img src="images/designs/de/Wilmington-University.png" title="Wilmington University" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+			  			<img src="images/designs/de/Wilmington-Zoo.png" title="Wilmington Zoo" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+			  			<img src="images/designs/de/Wilmington.png" title="Wilmington" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+			  			<img src="images/designs/de/World-Cafe-Queen.png" title="World Cafe Queen" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+			  		</div>
+
+			  		<div class="fpd-category" title="Sports Teams">
+				  		<img src="images/designs/teams/Baltimore-Orioles.png" title="Baltimore Orioles" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+				  		<img src="images/designs/teams/Baltimore-Ravens.png" title="Baltimore Ravens" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+				  		<img src="images/designs/teams/Dallas-Cowboys.png" title="Dallas Cowboys" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+				  		<img src="images/designs/teams/Giants_helmet.png" title="Giants Helmet" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+				  		<img src="images/designs/teams/Los-Angeles-Dodgers.png" title="Los Angeles Dodgers" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+				  		<img src="images/designs/teams/new_york_jets_helmet_rightface.png" title="New York Jets" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+				  		<img src="images/designs/teams/New-England-Patriots.png" title="New England Patriots" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+				  		<img src="images/designs/teams/New-York-Knicks.png" title="New York Knicks" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+				  		<img src="images/designs/teams/New-York-Yankees.png" title="New York Yankees" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+				  		<img src="images/designs/teams/Philadelphia-76ers.png" title="Philadelphia 76ers" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+				  		<img src="images/designs/teams/Philadelphia-Eagles.png" title="Philadelphia Eagles" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+				  		<img src="images/designs/teams/Philadelphia-Flyers.png" title="Philadelphia Flyers" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+				  		<img src="images/designs/teams/Philadelphia-Phillies.png" title="Philadelphia Phillies" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+				  		<img src="images/designs/teams/Philadelphia-Union.png" title="Philadelphia Union" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+				  		<img src="images/designs/teams/Wilmington-Blue-Rocks.png" title="Wilmington Blue Rocks" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+				  	</div>
+			  		<div class="fpd-category" title="Hobbies">
+				  		<img src="images/designs/hobbies/Acting-Drama.png" title="Acting Drama" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+			  			<img src="images/designs/hobbies/Airplane-flying.png" title="Airplane flying" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+			  			<img src="images/designs/hobbies/Archery.png" title="Archery" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+			  			<img src="images/designs/hobbies/Astronomy.png" title="Astronomy" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+			  			<img src="images/designs/hobbies/Baseball.png" title="Baseball" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+			  			<img src="images/designs/hobbies/Basketball.png" title="Basketball" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+			  			<img src="images/designs/hobbies/Beach.png" title="Beach" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+			  			<img src="images/designs/hobbies/beer.png" title="Beer" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+			  			<img src="images/designs/hobbies/Bird-watching.png" title="Bird Watching" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+			  			<img src="images/designs/hobbies/Bowling.png" title="Bowling" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+			  			<img src="images/designs/hobbies/Cheerleading.png" title="Cheerleading" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+			  			<img src="images/designs/hobbies/Chess.png" title="Chess" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+			  			<img src="images/designs/hobbies/Computer-Programming.png" title="Computer Programming" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+			  			<img src="images/designs/hobbies/Cooking.png" title="Cooking" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+			  			<img src="images/designs/hobbies/Dancing.png" title="Dancing" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+			  			<img src="images/designs/hobbies/Doctor.png" title="Doctor" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+			  			<img src="images/designs/hobbies/Fishing.png" title="Fishing" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+			  			<img src="images/designs/hobbies/Football.png" title="Football" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+			  			<img src="images/designs/hobbies/Gymnastics.png" title="Gymnastics" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+			  			<img src="images/designs/hobbies/Hiking.png" title="Hiking" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+			  			<img src="images/designs/hobbies/Hockey.png" title="Hockey" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+			  			<img src="images/designs/hobbies/Horse-Riding.png" title="Horse Riding" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+			  			<img src="images/designs/hobbies/Ice-Skating.png" title="Ice Skating" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+			  			<img src="images/designs/hobbies/IMAX-Movie-Theater.png" title="IMAX Movie Theater" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+			  			<img src="images/designs/hobbies/Kayaking.png" title="Kayaking" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+			  			<img src="images/designs/hobbies/Listening-Music.png" title="Listening Music" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+			  			<img src="images/designs/hobbies/magic.png" title="Magic" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+			  			<img src="images/designs/hobbies/Martial-Arts.png" title="Martial Arts" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+			  			<img src="images/designs/hobbies/Mountain-Climber.png" title="Mountain Climber" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+			  			<img src="images/designs/hobbies/Painting.png" title="Painting" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+			  			<img src="images/designs/hobbies/Photography.png" title="Photography" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+			  			<img src="images/designs/hobbies/Poker.png" title="Poker" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+			  			<img src="images/designs/hobbies/Pottery.png" title="Pottery" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+			  			<img src="images/designs/hobbies/Puzzles.png" title="Puzzles" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+			  			<img src="images/designs/hobbies/Reading-Books.png" title="Reading Books" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+			  			<img src="images/designs/hobbies/Running.png" title="Running" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+			  			<img src="images/designs/hobbies/Science.png" title="Science" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+			  			<img src="images/designs/hobbies/Scuba-Diving.png" title="Scuba Diving" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+			  			<img src="images/designs/hobbies/Shopping.png" title="Shopping" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+			  			<img src="images/designs/hobbies/Singing.png" title="Singing" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+			  			<img src="images/designs/hobbies/Skateboarding.png" title="Skateboarding" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+			  			<img src="images/designs/hobbies/Skiing.png" title="Skiing" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+			  			<img src="images/designs/hobbies/Snowboarding.png" title="Snowboarding" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+			  			<img src="images/designs/hobbies/Soccer.png" title="Soccer" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+			  			<img src="images/designs/hobbies/Space-Travel.png" title="Space Travel" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+			  			<img src="images/designs/hobbies/Stock-Car-racing.png" title="Stock Car Racing" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+			  			<img src="images/designs/hobbies/Swimming.png" title="Swimming" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+			  			<img src="images/designs/hobbies/Tennis.png" title="Tennis" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+			  			<img src="images/designs/hobbies/Texting.png" title="Texting" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+			  			<img src="images/designs/hobbies/Video-Games.png" title="Video Games" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+			  			<img src="images/designs/hobbies/weightlifting.png" title="weightlifting" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+			  			<img src="images/designs/hobbies/Wine.png" title="Wine" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+			  			<img src="images/designs/hobbies/Writing.png" title="Writing" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+			  			<img src="images/designs/hobbies/Yoga.png" title="Yoga" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+			  			
+			  		</div>
+			  		<div class="fpd-category" title="States">
+				  		<img src="images/designs/state/Alabama.png" title="Alabama" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+				  		<img src="images/designs/state/Alaska.png" title="Alaska" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+				  		<img src="images/designs/state/Arizona.png" title="Arizona" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+				  		<img src="images/designs/state/Arkansas.png" title="Arkansas" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+				  		<img src="images/designs/state/California.png" title="California" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+				  		<img src="images/designs/state/Colorado.png" title="Colorado" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+				  		<img src="images/designs/state/Connecticut.png" title="Connecticut" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+				  		<img src="images/designs/state/Delaware.png" title="Delaware" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+				  		<img src="images/designs/state/Florida.png" title="Florida" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+				  		<img src="images/designs/state/Georgia.png" title="Georgia" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+
+				  		<img src="images/designs/state/Hawaii.png" title="Hawaii" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+				  		<img src="images/designs/state/Idaho.png" title="Idaho" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+				  		<img src="images/designs/state/Illinois.png" title="Illinois" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+				  		<img src="images/designs/state/Indiana.png" title="Indiana" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+				  		<img src="images/designs/state/Iowa.png" title="Iowa" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+				  		<img src="images/designs/state/Kansas.png" title="Kansas" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+				  		<img src="images/designs/state/Kentucky.png" title="Kentucky" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+				  		<img src="images/designs/state/Louisiana.png" title="Louisiana" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+				  		<img src="images/designs/state/Maine.png" title="Maine" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+				  		<img src="images/designs/state/Maryland.png" title="Maryland" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+
+				  		<img src="images/designs/state/Massachusetts.png" title="Massachusetts" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+				  		<img src="images/designs/state/Michigan.png" title="Michigan" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+				  		<img src="images/designs/state/Minnesota.png" title="Minnesota" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+				  		<img src="images/designs/state/Mississippi.png" title="Mississippi" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+				  		<img src="images/designs/state/Missouri.png" title="Missouri" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+				  		<img src="images/designs/state/Montana.png" title="Montana" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+				  		<img src="images/designs/state/Nebraska.png" title="Nebraska" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+				  		<img src="images/designs/state/Nevada.png" title="Nevada" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+				  		<img src="images/designs/state/New-Hampshire.png" title="New Hampshire" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+				  		<img src="images/designs/state/New-Jersey.png" title="New Jersey" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+
+				  		<img src="images/designs/state/New-Mexico.png" title="New Mexico" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+				  		<img src="images/designs/state/New-York.png" title="New York" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+				  		<img src="images/designs/state/North-Carolina.png" title="North Carolina" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+				  		<img src="images/designs/state/North-Dakota.png" title="North Dakota" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+				  		<img src="images/designs/state/Ohio.png" title="Ohio" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+				  		<img src="images/designs/state/Oklahoma.png" title="Oklahoma" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+				  		<img src="images/designs/state/Oregon.png" title="Oregon" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+				  		<img src="images/designs/state/Pennsylvania.png" title="Pennsylvania" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+				  		<img src="images/designs/state/Rhode-Island.png" title="Rhode Island" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+				  		<img src="images/designs/state/South-Carolina.png" title="South Carolina" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+
+				  		<img src="images/designs/state/South-Dakota.png" title="South Dakota" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+				  		<img src="images/designs/state/Tennessee.png" title="Tennessee" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+				  		<img src="images/designs/state/Texas.png" title="Texas" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+				  		<img src="images/designs/state/Utah.png" title="Utah" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+				  		<img src="images/designs/state/Vermont.png" title="Vermont" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+				  		<img src="images/designs/state/Virginia.png" title="Virginia" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+				  		<img src="images/designs/state/Washington.png" title="Washington" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+				  		<img src="images/designs/state/West-Virginia.png" title="West Virginia" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+				  		<img src="images/designs/state/Wisconsin.png" title="Wisconsin" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+				  		<img src="images/designs/state/Wyoming.png" title="Wyoming" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+
+			  		</div>
+			  		<div class="fpd-category" title="Vehicles">
+				  		<img src="images/designs/vehicles/Boat.png" title="Boat" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+				  		<img src="images/designs/vehicles/Bus.png" title="Bus" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+				  		<img src="images/designs/vehicles/Classic-Car.png" title="Classic-Car" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+				  		<img src="images/designs/vehicles/Convertible-car.png" title="Convertible-car" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+				  		<img src="images/designs/vehicles/Cooper-mini.png" title="Cooper-mini" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+				  		<img src="images/designs/vehicles/Hummer.png" title="Hummer" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+				  		<img src="images/designs/vehicles/Hybrid.png" title="Hybrid" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+				  		<img src="images/designs/vehicles/Jeep.png" title="Jeep" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+
+			  		</div>
+			  		<div class="fpd-category" title="Zodiac Signs">
+				  		<img src="images/designs/zodiac/Aquarius.png" title="Aquarius" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+				  		<img src="images/designs/zodiac/Aries.png" title="Aries" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+				  		<img src="images/designs/zodiac/Cancer.png" title="Cancer" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+				  		<img src="images/designs/zodiac/Capricorn.png" title="Capricorn" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+				  		<img src="images/designs/zodiac/gemini.png" title="gemini" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+				  		<img src="images/designs/zodiac/Leo.png" title="Leo" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+				  		<img src="images/designs/zodiac/Libra.png" title="Libra" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+				  		<img src="images/designs/zodiac/Pisces.png" title="Pisces" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+				  		<img src="images/designs/zodiac/Sagittarius.png" title="Sagittarius" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+				  		<img src="images/designs/zodiac/Scorpio.png" title="Scorpio" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+				  		<img src="images/designs/zodiac/Taurus.png" title="Taurus" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+				  		<img src="images/designs/zodiac/Virgo.png" title="Virgo" data-parameters='{"zChangeable": true, "x": 215, "y": 200, "colors": "#000000", "removable": true, "draggable": true, "rotatable": true, "resizable": true, "boundingBox": "Base", "autoCenter": true}' />
+
+			  		</div>
+			  		
 				</div><!-- end of fpd-design -->	
 		  	</div><!-- end of clothing-designer-->  
 		  	

@@ -2516,7 +2516,7 @@ h3 {
   font-family: "proxima-nova", sans-serif;
   font-weight: 700;
   text-transform: uppercase;
-  font-size: 16px;
+  font-size: 17px;
   line-height: 20px;
   letter-spacing: 0.02em;
   padding-left: 10px;
@@ -2527,9 +2527,10 @@ h5 {
   font-family: "minion-pro-caption", serif;
   font-weight: 300;
   font-style: italic;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 20px;
   letter-spacing: 0.02em;
+  margin-bottom: 5px;
 }
 
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
@@ -7738,6 +7739,95 @@ button.close {
     display: none !important;
   }
 }
+.front header {
+  background: none;
+}
+.front header img {
+  margin: 0 auto;
+  float: none;
+  display: block;
+}
+.front .main {
+  margin: 10% auto 0px auto;
+  padding: 0px 20%;
+  height: 100%;
+  width: 100%;
+  display: block;
+  text-align: center;
+  max-width: 960px;
+}
+.front .main .divider {
+  display: block;
+  height: 1px;
+  width: 150px;
+  background-color: #d9d0bf;
+  margin: 20px auto;
+}
+.front .main h1 {
+  font-size: 60px;
+  color: #eed9a1;
+  font-style: italic;
+  font-family: "minion-pro-caption", serif;
+  text-transform: capitalize;
+  font-weight: normal;
+  letter-spacing: 0.02em;
+}
+.front .main p {
+  font-size: 22px;
+  line-height: 30px;
+  color: white;
+  font-family: "minion-pro-caption", serif;
+}
+.front .main .btn {
+  margin: 25px auto 0 auto;
+  float: none;
+  padding: 20px 30px;
+}
+
+.vegas-loading {
+  border-radius: 10px;
+  background: #000;
+  background: rgba(0, 0, 0, 0.7);
+  background: url(images/loading.gif) no-repeat center center;
+  /* Loading Gif by http://preloaders.net/ */
+  height: 32px;
+  left: 20px;
+  position: absolute;
+  top: 20px;
+  width: 32px;
+  z-index: 0;
+}
+@media (min-width: 740px) {
+  .vegas-loading {
+    position: fixed;
+  }
+}
+
+.vegas-overlay {
+  background: transparent url(overlays/01.png);
+  opacity: 0.5;
+  z-index: -1;
+}
+
+.vegas-background {
+  -ms-interpolation-mode: bicubic;
+  image-rendering: optimizeQuality;
+  max-width: none !important;
+  /* counteracts global img modification by twitter bootstrap library */
+  z-index: -2;
+  position: absolute;
+  @inlcude .background-cover;
+}
+
+.vegas-overlay,
+.vegas-background {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
 header {
   width: 100%;
   height: 100px;
@@ -7768,16 +7858,23 @@ header h1 {
   color: #d9d0bf;
   font-size: 35px;
   float: left;
+  letter-spacing: 0.02em;
+  font-style: italic;
   padding-left: 20px;
   line-height: 100px;
   font-weight: 200;
   text-transform: inherit;
 }
 
+#clothing-designer {
+  max-height: 768px;
+  overflow: hidden;
+}
+
 .fpd-sidebar {
   background-color: rgba(217, 208, 191, 0.3);
   border-width: 0px;
-  overflow: hidden;
+  height: 600px !important;
 }
 
 .fpd-navigation {
@@ -7828,6 +7925,10 @@ header h1 {
   right: 0;
   background: url("../images/arrow.png") center no-repeat;
   background-size: 15px;
+  z-index: 9999999;
+}
+.fpd-navigation .chosen-search {
+  display: none;
 }
 
 .fpd-content {
@@ -7835,7 +7936,12 @@ header h1 {
   height: 100%;
   position: relative;
   padding-top: 20px !important;
+  overflow: hidden;
+}
+.fpd-content .fpd-designs .fpd-items-wrapper {
   overflow: scroll;
+  max-height: 420px;
+  -webkit-overflow-scrolling: touch;
 }
 .fpd-content .fpd-items-wrapper > picture {
   border-right: 1px solid rgba(217, 208, 191, 0.9);
@@ -7857,6 +7963,22 @@ header h1 {
 .fpd-content .chosen-container {
   width: 100% !important;
 }
+.fpd-content .fpd-text-styles i {
+  font-size: 25px;
+  margin-right: 15px;
+}
+.fpd-content .fpd-helper-buttons-wrapper i {
+  font-size: 25px;
+  margin-right: 15px;
+}
+.fpd-content .fpd-helper-buttons-wrapper svg {
+  width: 25px !important;
+  height: 25px !important;
+  margin-right: 15px;
+}
+.fpd-content .chosen-search {
+  display: none;
+}
 
 .fpd-product-container {
   height: auto !important;
@@ -7872,10 +7994,8 @@ header h1 {
   display: none !important;
 }
 .fpd-product-container > .fpd-product-stage {
-  background-image: url("../images/fpd/grid.png");
-  background-repeat: repeat;
   position: relative;
-  height: 100%;
+  height: 600px !important;
   width: 100%;
   overflow: hidden;
 }
@@ -7949,12 +8069,11 @@ header h1 {
 
 .fpd-color-picker > .sp-replacer {
   width: 100%;
-  max-width: 200px;
 }
 
 .fpd-color-picker .sp-preview {
   border: none;
-  height: 16px;
+  height: 25px;
   width: 100%;
 }
 
@@ -8024,7 +8143,6 @@ header h1 {
   resize: none;
   width: 100%;
   height: 65px;
-  font-size: 10px;
   padding: 5px;
 }
 
@@ -8035,15 +8153,6 @@ header h1 {
 
 .fpd-curved-text-wrapper input {
   width: 100%;
-}
-
-/* HELPER BUTTONS */
-.fpd-helper-buttons-wrapper > button {
-  margin-bottom: 10px;
-}
-
-.fpd-helper-buttons-wrapper > button:last-child {
-  margin-right: 0 !important;
 }
 
 /* BROWSER ALERT */
@@ -8074,10 +8183,6 @@ header h1 {
 .fpd-editor-box > h3 {
   margin: 0 0 10px;
   font-size: 18px;
-}
-
-.fpd-editor-box i {
-  font-size: 12px;
 }
 
 /* LAYOUTS */
@@ -8199,6 +8304,7 @@ header h1 {
 .ps-container .ps-scrollbar-y,
 .ps-container .ps-scrollbar-x {
   cursor: all-scroll;
+  display: none;
 }
 
 .ps-container .ps-scrollbar-y {

@@ -106,7 +106,7 @@
 
     <body>
     	<div>
-	    	<canvas id="recreation-canvas" width="600" height="600">
+	    	<canvas id="recreation-canvas" >
     	</div>
     </body>
 </html>
