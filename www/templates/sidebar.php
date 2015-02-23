@@ -42,7 +42,7 @@ $insta_load_next = isset($_POST['instaLoadNext']) ? $_POST['instaLoadNext'] : 'L
 
 ?>
 
-<section class="fpd-sidebar fpd-clearfix sidebar">
+<section class="fpd-sidebar sidebar">
 
 	<!-- Navigation -->
 	<div class="fpd-navigation">
@@ -119,32 +119,6 @@ $insta_load_next = isset($_POST['instaLoadNext']) ? $_POST['instaLoadNext'] : 'L
 					<h5><?php echo $section_helpers; ?></h5>
 					<span title="<?php echo $customize_center_h; ?>" class="fpd-center-horizontal fpd-button fpd-tooltip"><i class="fa fa-arrows-h"></i></span>
 					<span title="<?php echo $customize_center_c; ?>" class="fpd-center-vertical fpd-button fpd-tooltip"><i class="fa fa-arrows-v"></i></span>
-					<span title="<?php echo $customize_center_move_down; ?>" class="fpd-move-down fpd-button fpd-tooltip">
-						<svg width="14px" height="14px" viewBox="0 0 128 128" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
-						    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
-						        <g id="128" sketch:type="MSArtboardGroup" fill="#000000">
-						            <g id="bring-down" sketch:type="MSLayerGroup" transform="translate(64.000000, 64.000000) scale(1, -1) translate(-64.000000, -64.000000) ">
-						                <path d="M0.178710937,-0.165039062 L0.178710937,20.1124808 L128.495657,20.1124808 L128.495657,-0.0366981049 L0.178710937,-0.165039062 Z" id="Path-1" sketch:type="MSShapeGroup"></path>
-						                <path d="M63.3711191,27 L36,55 L91.0019531,55 L63.3711191,27 Z" id="Path-2" sketch:type="MSShapeGroup"></path>
-						                <rect id="Rectangle-1" sketch:type="MSShapeGroup" x="54" y="48" width="20.3852293" height="80"></rect>
-						            </g>
-						        </g>
-						    </g>
-						</svg>
-					</span>
-					<span title="<?php echo $customize_center_move_up; ?>" class="fpd-move-up fpd-button fpd-tooltip">
-						<svg class="fpd-move-up" width="14px" height="14px" viewBox="0 0 128 128" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
-						  <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
-					        <g id="128" sketch:type="MSArtboardGroup" fill="#000000">
-					            <g id="move-up" sketch:type="MSLayerGroup">
-					                <path d="M0.178710937,-0.165039062 L0.178710937,20.1124808 L128.495657,20.1124808 L128.495657,-0.0366981049 L0.178710937,-0.165039062 Z" id="Path-1" sketch:type="MSShapeGroup"></path>
-					                <path d="M63.3711191,27 L36,55 L91.0019531,55 L63.3711191,27 Z" id="Path-2" sketch:type="MSShapeGroup"></path>
-					                <rect id="Rectangle-1" sketch:type="MSShapeGroup" x="54" y="48" width="20.3852293" height="80"></rect>
-					            </g>
-					        </g>
-					    </g>
-						</svg>
-					</span>
 					<span title="<?php echo $customize_reset; ?>" class="fpd-reset fpd-button fpd-tooltip"><i class="fa fa-refresh"></i></span>
 					<span title="<?php echo $customize_center_trash; ?>" class="fpd-trash fpd-button fpd-button-danger fpd-tooltip"><i class="fa fa-trash-o"></i></span>
 				</div>

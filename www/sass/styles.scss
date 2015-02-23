@@ -7,6 +7,100 @@
 @import "base";
 @import "bootstrap";
 
+.front {
+    header {
+        background:none;
+        img {
+            margin: 0 auto; 
+            float: none;
+            display: block;
+        }
+    }
+
+    .main {
+        margin: 10% auto 0px auto;
+        padding: 0px 20%;
+        height: 100%;
+        width: 100%;
+        display: block;
+        text-align: center;
+        max-width: 960px;
+
+
+        .divider {
+            display: block;
+            height: 1px;
+            width: 150px;
+            background-color: $tan;
+            margin: 20px auto;
+        }
+
+        h1 {
+            font-size: 60px;
+            color: $yellow;
+            font-style: italic;
+            font-family: $minion;
+            text-transform: capitalize;
+            font-weight: normal;
+            letter-spacing: 0.02em;
+        }
+        p {
+            font-size: 22px;
+            line-height: 30px;
+            color: white;
+            font-family: $minion;
+        }
+
+        .btn {
+            margin: 25px auto 0 auto;
+            float: none;
+            padding: 20px 30px;
+
+        }
+    }
+}
+
+
+.vegas-loading {
+    border-radius: 10px;
+    background: #000;
+    background: rgba(0,0,0,0.7);
+    background: url(images/loading.gif) no-repeat center center; /* Loading Gif by http://preloaders.net/ */
+    height: 32px;
+    left: 20px;
+    position: absolute;
+    top: 20px;
+    width: 32px; 
+    z-index: 0;
+   
+    @include breakpoint($tab) {position: fixed;}
+}
+
+.vegas-overlay {
+    background: transparent url(overlays/01.png);
+    opacity: 0.5;
+    z-index: -1;
+}
+
+.vegas-background {
+    -ms-interpolation-mode: bicubic;
+    image-rendering: optimizeQuality;
+    max-width: none !important; /* counteracts global img modification by twitter bootstrap library */
+    z-index: -2;
+    position: absolute;
+    @inlcude .background-cover;
+}
+
+.vegas-overlay,
+.vegas-background {
+    -webkit-user-select: none;
+     -khtml-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}
+
+
 
 header {
     width: 100%;
@@ -40,17 +134,23 @@ header {
         color:$tan;
         font-size: 35px;
         float: left;
+        letter-spacing: 0.02em;
+        font-style: italic;
         padding-left: 20px;
         line-height: 100px;
         font-weight: 200;
         text-transform: inherit;
     }
 }
+#clothing-designer {
+    max-height: 768px;
+    overflow: hidden;
+}
 
 .fpd-sidebar {
     background-color: rgba($tan, 0.3);
-    border-width: 0px; 
-    overflow: hidden; 
+    border-width: 0px;
+    height: 600px!important;
 }
 
 .fpd-navigation {
@@ -99,8 +199,11 @@ header {
             right:0;
             background: url('../images/arrow.png') center no-repeat;
             background-size:15px;
+            z-index: 9999999;
         }
-    }      
+    }
+
+    .chosen-search {display: none;}   
 }
 
 .fpd-content {
@@ -108,8 +211,13 @@ header {
     height: 100%;
     position: relative;
     padding-top: 20px!important;
-    overflow: scroll;
+    overflow: hidden;
 
+    .fpd-designs .fpd-items-wrapper {
+        overflow: scroll;
+        max-height: 420px;
+        -webkit-overflow-scrolling: touch;
+    }
     .fpd-items-wrapper > picture {
         border-right:1px solid rgba($tan,0.9);
         border-bottom:1px solid rgba($tan,0.9);
@@ -133,21 +241,24 @@ header {
     }
 
     .fpd-text-styles i {
-        font-size: 20px;
-        margin-right: 5px;
+        font-size: 25px;
+        margin-right: 15px;
+
     }
 
     .fpd-helper-buttons-wrapper {
         i {
-            font-size: 20px;
-            margin-right: 10px;
+            font-size: 25px;
+            margin-right: 15px;
         }
         svg {
-            width: 20px!important;
-            height: 20px!important;
-            margin-right: 10px;
+            width: 25px!important;
+            height: 25px!important;
+            margin-right: 15px;
         }
     }
+
+    .chosen-search {display: none;}
 
 }
 
@@ -164,10 +275,10 @@ header {
     }
 
     > .fpd-product-stage {
-        background-image: url("../images/fpd/grid.png");
-        background-repeat: repeat;
+        //background-image: url("../images/fpd/grid.png");
+        //background-repeat: repeat;
         position: relative;
-        height: 100%;
+        height: 600px!important;
         width: 100%;
         overflow: hidden;
     }
@@ -254,12 +365,11 @@ header {
 
 .fpd-color-picker > .sp-replacer {
     width: 100%;
-    max-width: 200px;
 }
 
 .fpd-color-picker .sp-preview {
     border: none;
-    height: 16px;
+    height: 25px;
     width: 100%;
 }
 
@@ -347,17 +457,6 @@ header {
 }
 
 
-/* HELPER BUTTONS */
-
-.fpd-helper-buttons-wrapper > button {
-    margin-bottom: 10px;
-}
-
-.fpd-helper-buttons-wrapper > button:last-child {
-    margin-right: 0 !important;
-}
-
-
 /* BROWSER ALERT */
 .fpd-browser-alert {
     padding: 10px !important;
@@ -390,9 +489,6 @@ header {
     font-size: 18px;
 }
 
-.fpd-editor-box i {
-    font-size:25px;
-}
 
 /* LAYOUTS */
 
@@ -520,6 +616,7 @@ header {
 .ps-container .ps-scrollbar-y,
 .ps-container .ps-scrollbar-x {
     cursor: all-scroll;
+    display: none;
 }
 
 .ps-container .ps-scrollbar-y {
