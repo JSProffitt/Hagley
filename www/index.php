@@ -74,7 +74,23 @@ $insta_load_next = isset($_POST['instaLoadNext']) ? $_POST['instaLoadNext'] : 'L
 	<script>try{Typekit.load();}catch(e){}</script>
 
     <script type="text/javascript">
+	    
+	    // Define idle timer variable
+	    idleTimer = null;
+
+	    // Define timeout duration
+	    timeoutDuration = 600000;
+
 	    jQuery(document).ready(function(){
+
+	    	// start the timer
+	    	startTimer(timeoutDuration);
+
+	    	// Clear and restart the timer if the user clicks on the page
+	    	$('body').click(function() {
+	    		window.clearTimeout(idleTimer);
+	    		startTimer(timeoutDuration);
+	    	});
 
 	    	var yourDesigner = $('#clothing-designer').fancyProductDesigner({
 	    		editorMode: false,
@@ -175,6 +191,20 @@ $insta_load_next = isset($_POST['instaLoadNext']) ? $_POST['instaLoadNext'] : 'L
 				}
 			};
 	    });
+
+		
+		/**
+		 * Create a timer to redirect to the intro screen
+		 * @param  int duration Time before redirect (in milliseconds)
+		 * @return NULL
+		 */
+		function startTimer(duration)
+		{
+			idleTimer = window.setTimeout(function() {
+	    		location.replace('intro.php');
+	    	}, duration);
+
+		}
     </script>
     </head>
 
