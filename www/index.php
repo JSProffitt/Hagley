@@ -92,6 +92,10 @@ $insta_load_next = isset($_POST['instaLoadNext']) ? $_POST['instaLoadNext'] : 'L
 	    		startTimer(timeoutDuration);
 	    	});
 
+	    	$('.done').click(function() {
+	    		
+	    	})
+
 	    	var yourDesigner = $('#clothing-designer').fancyProductDesigner({
 	    		editorMode: false,
 	    		fonts: ['Cursive', 'Arial', 'Fearless', 'Helvetica', 'Times New Roman', 'Verdana', 'Geneva', 'Gorditas'],
