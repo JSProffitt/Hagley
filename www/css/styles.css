@@ -2818,8 +2818,9 @@ th {
     background-color: #fff !important;
   }
 
-  .btn > .caret,
-  .dropup > .btn > .caret {
+  .btn > .caret, .modal button > .caret,
+  .dropup > .btn > .caret,
+  .modal .dropup > button > .caret {
     border-top-color: #000 !important;
   }
 
@@ -4293,16 +4294,19 @@ input[type="checkbox"] {
 }
 .form-control-static.input-lg, .form-horizontal .form-group-lg .form-control-static.form-control, .input-group-lg > .form-control-static.form-control,
 .input-group-lg > .form-control-static.input-group-addon,
-.input-group-lg > .input-group-btn > .form-control-static.btn, .form-control-static.input-sm, .form-horizontal .form-group-sm .form-control-static.form-control, .input-group-sm > .form-control-static.form-control,
+.input-group-lg > .input-group-btn > .form-control-static.btn,
+.modal .input-group-lg > .input-group-btn > button.form-control-static, .form-control-static.input-sm, .form-horizontal .form-group-sm .form-control-static.form-control, .input-group-sm > .form-control-static.form-control,
 .input-group-sm > .form-control-static.input-group-addon,
-.input-group-sm > .input-group-btn > .form-control-static.btn {
+.input-group-sm > .input-group-btn > .form-control-static.btn,
+.modal .input-group-sm > .input-group-btn > button.form-control-static {
   padding-left: 0;
   padding-right: 0;
 }
 
 .input-sm, .form-horizontal .form-group-sm .form-control, .input-group-sm > .form-control,
 .input-group-sm > .input-group-addon,
-.input-group-sm > .input-group-btn > .btn {
+.input-group-sm > .input-group-btn > .btn,
+.modal .input-group-sm > .input-group-btn > button {
   height: 30px;
   padding: 5px 10px;
   font-size: 12px;
@@ -4330,7 +4334,8 @@ select[multiple].input-sm,
 
 .input-lg, .form-horizontal .form-group-lg .form-control, .input-group-lg > .form-control,
 .input-group-lg > .input-group-addon,
-.input-group-lg > .input-group-btn > .btn {
+.input-group-lg > .input-group-btn > .btn,
+.modal .input-group-lg > .input-group-btn > button {
   height: 46px;
   padding: 10px 16px;
   font-size: 18px;
@@ -4377,7 +4382,8 @@ select[multiple].input-lg,
 
 .input-lg + .form-control-feedback, .form-horizontal .form-group-lg .form-control + .form-control-feedback, .input-group-lg > .form-control + .form-control-feedback,
 .input-group-lg > .input-group-addon + .form-control-feedback,
-.input-group-lg > .input-group-btn > .btn + .form-control-feedback {
+.input-group-lg > .input-group-btn > .btn + .form-control-feedback,
+.modal .input-group-lg > .input-group-btn > button + .form-control-feedback {
   width: 46px;
   height: 46px;
   line-height: 46px;
@@ -4385,7 +4391,8 @@ select[multiple].input-lg,
 
 .input-sm + .form-control-feedback, .form-horizontal .form-group-sm .form-control + .form-control-feedback, .input-group-sm > .form-control + .form-control-feedback,
 .input-group-sm > .input-group-addon + .form-control-feedback,
-.input-group-sm > .input-group-btn > .btn + .form-control-feedback {
+.input-group-sm > .input-group-btn > .btn + .form-control-feedback,
+.modal .input-group-sm > .input-group-btn > button + .form-control-feedback {
   width: 30px;
   height: 30px;
   line-height: 30px;
@@ -4769,26 +4776,36 @@ tbody.collapse.in {
   display: inline-block;
   vertical-align: middle;
 }
-.btn-group > .btn,
-.btn-group-vertical > .btn {
+.btn-group > .btn, .modal .btn-group > button,
+.btn-group-vertical > .btn,
+.modal .btn-group-vertical > button {
   position: relative;
   float: left;
 }
-.btn-group > .btn:hover, .btn-group > .btn:focus, .btn-group > .btn:active, .btn-group > .btn.active,
+.btn-group > .btn:hover, .modal .btn-group > button:hover, .btn-group > .btn:focus, .modal .btn-group > button:focus, .btn-group > .btn:active, .modal .btn-group > button:active, .btn-group > .btn.active, .modal .btn-group > button.active,
 .btn-group-vertical > .btn:hover,
+.modal .btn-group-vertical > button:hover,
 .btn-group-vertical > .btn:focus,
+.modal .btn-group-vertical > button:focus,
 .btn-group-vertical > .btn:active,
-.btn-group-vertical > .btn.active {
+.modal .btn-group-vertical > button:active,
+.btn-group-vertical > .btn.active,
+.modal .btn-group-vertical > button.active {
   z-index: 2;
 }
-.btn-group > .btn:focus,
-.btn-group-vertical > .btn:focus {
+.btn-group > .btn:focus, .modal .btn-group > button:focus,
+.btn-group-vertical > .btn:focus,
+.modal .btn-group-vertical > button:focus {
   outline: 0;
 }
 
-.btn-group .btn + .btn,
+.btn-group .btn + .btn, .btn-group .modal button + .btn, .modal .btn-group button + .btn, .btn-group .modal .btn + button, .modal .btn-group .btn + button, .btn-group .modal button + button, .modal .btn-group button + button,
 .btn-group .btn + .btn-group,
+.btn-group .modal button + .btn-group,
+.modal .btn-group button + .btn-group,
 .btn-group .btn-group + .btn,
+.btn-group .modal .btn-group + button,
+.modal .btn-group .btn-group + button,
 .btn-group .btn-group + .btn-group {
   margin-left: -1px;
 }
@@ -4807,25 +4824,25 @@ tbody.collapse.in {
 .btn-toolbar .input-group {
   float: left;
 }
-.btn-toolbar > .btn,
+.btn-toolbar > .btn, .modal .btn-toolbar > button,
 .btn-toolbar > .btn-group,
 .btn-toolbar > .input-group {
   margin-left: 5px;
 }
 
-.btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle) {
+.btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle), .modal .btn-group > button:not(:first-child):not(:last-child):not(.dropdown-toggle) {
   border-radius: 0;
 }
 
-.btn-group > .btn:first-child {
+.btn-group > .btn:first-child, .modal .btn-group > button:first-child {
   margin-left: 0;
 }
-.btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle) {
+.btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle), .modal .btn-group > button:first-child:not(:last-child):not(.dropdown-toggle) {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
 }
 
-.btn-group > .btn:last-child:not(:first-child),
+.btn-group > .btn:last-child:not(:first-child), .modal .btn-group > button:last-child:not(:first-child),
 .btn-group > .dropdown-toggle:not(:first-child) {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
@@ -4835,17 +4852,17 @@ tbody.collapse.in {
   float: left;
 }
 
-.btn-group > .btn-group:not(:first-child):not(:last-child) > .btn {
+.btn-group > .btn-group:not(:first-child):not(:last-child) > .btn, .modal .btn-group > .btn-group:not(:first-child):not(:last-child) > button {
   border-radius: 0;
 }
 
-.btn-group > .btn-group:first-child > .btn:last-child,
+.btn-group > .btn-group:first-child > .btn:last-child, .modal .btn-group > .btn-group:first-child > button:last-child,
 .btn-group > .btn-group:first-child > .dropdown-toggle {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
 }
 
-.btn-group > .btn-group:last-child > .btn:first-child {
+.btn-group > .btn-group:last-child > .btn:first-child, .modal .btn-group > .btn-group:last-child > button:first-child {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
 }
@@ -4855,12 +4872,12 @@ tbody.collapse.in {
   outline: 0;
 }
 
-.btn-group > .btn + .dropdown-toggle {
+.btn-group > .btn + .dropdown-toggle, .modal .btn-group > button + .dropdown-toggle {
   padding-left: 8px;
   padding-right: 8px;
 }
 
-.btn-group > .btn-lg + .dropdown-toggle, .btn-group-lg.btn-group > .btn + .dropdown-toggle {
+.btn-group > .btn-lg + .dropdown-toggle, .btn-group-lg.btn-group > .btn + .dropdown-toggle, .modal .btn-group-lg.btn-group > button + .dropdown-toggle {
   padding-left: 12px;
   padding-right: 12px;
 }
@@ -4874,22 +4891,23 @@ tbody.collapse.in {
   box-shadow: none;
 }
 
-.btn .caret {
+.btn .caret, .modal button .caret {
   margin-left: 0;
 }
 
-.btn-lg .caret, .btn-group-lg > .btn .caret {
+.btn-lg .caret, .btn-group-lg > .btn .caret, .modal .btn-group-lg > button .caret {
   border-width: 5px 5px 0;
   border-bottom-width: 0;
 }
 
-.dropup .btn-lg .caret, .dropup .btn-group-lg > .btn .caret {
+.dropup .btn-lg .caret, .dropup .btn-group-lg > .btn .caret, .dropup .modal .btn-group-lg > button .caret, .modal .dropup .btn-group-lg > button .caret {
   border-width: 0 5px 5px;
 }
 
-.btn-group-vertical > .btn,
+.btn-group-vertical > .btn, .modal .btn-group-vertical > button,
 .btn-group-vertical > .btn-group,
-.btn-group-vertical > .btn-group > .btn {
+.btn-group-vertical > .btn-group > .btn,
+.modal .btn-group-vertical > .btn-group > button {
   display: block;
   float: none;
   width: 100%;
@@ -4902,42 +4920,44 @@ tbody.collapse.in {
 .btn-group-vertical > .btn-group:after {
   clear: both;
 }
-.btn-group-vertical > .btn-group > .btn {
+.btn-group-vertical > .btn-group > .btn, .modal .btn-group-vertical > .btn-group > button {
   float: none;
 }
-.btn-group-vertical > .btn + .btn,
+.btn-group-vertical > .btn + .btn, .modal .btn-group-vertical > button + .btn, .modal .btn-group-vertical > .btn + button, .modal .btn-group-vertical > button + button,
 .btn-group-vertical > .btn + .btn-group,
+.modal .btn-group-vertical > button + .btn-group,
 .btn-group-vertical > .btn-group + .btn,
+.modal .btn-group-vertical > .btn-group + button,
 .btn-group-vertical > .btn-group + .btn-group {
   margin-top: -1px;
   margin-left: 0;
 }
 
-.btn-group-vertical > .btn:not(:first-child):not(:last-child) {
+.btn-group-vertical > .btn:not(:first-child):not(:last-child), .modal .btn-group-vertical > button:not(:first-child):not(:last-child) {
   border-radius: 0;
 }
-.btn-group-vertical > .btn:first-child:not(:last-child) {
+.btn-group-vertical > .btn:first-child:not(:last-child), .modal .btn-group-vertical > button:first-child:not(:last-child) {
   border-top-right-radius: 4px;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
-.btn-group-vertical > .btn:last-child:not(:first-child) {
+.btn-group-vertical > .btn:last-child:not(:first-child), .modal .btn-group-vertical > button:last-child:not(:first-child) {
   border-bottom-left-radius: 4px;
   border-top-right-radius: 0;
   border-top-left-radius: 0;
 }
 
-.btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn {
+.btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn, .modal .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > button {
   border-radius: 0;
 }
 
-.btn-group-vertical > .btn-group:first-child:not(:last-child) > .btn:last-child,
+.btn-group-vertical > .btn-group:first-child:not(:last-child) > .btn:last-child, .modal .btn-group-vertical > .btn-group:first-child:not(:last-child) > button:last-child,
 .btn-group-vertical > .btn-group:first-child:not(:last-child) > .dropdown-toggle {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
 
-.btn-group-vertical > .btn-group:last-child:not(:first-child) > .btn:first-child {
+.btn-group-vertical > .btn-group:last-child:not(:first-child) > .btn:first-child, .modal .btn-group-vertical > .btn-group:last-child:not(:first-child) > button:first-child {
   border-top-right-radius: 0;
   border-top-left-radius: 0;
 }
@@ -4948,21 +4968,22 @@ tbody.collapse.in {
   table-layout: fixed;
   border-collapse: separate;
 }
-.btn-group-justified > .btn,
+.btn-group-justified > .btn, .modal .btn-group-justified > button,
 .btn-group-justified > .btn-group {
   float: none;
   display: table-cell;
   width: 1%;
 }
-.btn-group-justified > .btn-group .btn {
+.btn-group-justified > .btn-group .btn, .btn-group-justified > .btn-group .modal button, .modal .btn-group-justified > .btn-group button {
   width: 100%;
 }
 .btn-group-justified > .btn-group .dropdown-menu {
   left: auto;
 }
 
-[data-toggle="buttons"] > .btn > input[type="radio"],
-[data-toggle="buttons"] > .btn > input[type="checkbox"] {
+[data-toggle="buttons"] > .btn > input[type="radio"], .modal [data-toggle="buttons"] > button > input[type="radio"],
+[data-toggle="buttons"] > .btn > input[type="checkbox"],
+.modal [data-toggle="buttons"] > button > input[type="checkbox"] {
   position: absolute;
   z-index: -1;
   opacity: 0;
@@ -5018,14 +5039,16 @@ tbody.collapse.in {
 }
 .input-group-addon.input-sm, .form-horizontal .form-group-sm .input-group-addon.form-control,
 .input-group-sm > .input-group-addon,
-.input-group-sm > .input-group-btn > .input-group-addon.btn {
+.input-group-sm > .input-group-btn > .input-group-addon.btn,
+.modal .input-group-sm > .input-group-btn > button.input-group-addon {
   padding: 5px 10px;
   font-size: 12px;
   border-radius: 3px;
 }
 .input-group-addon.input-lg, .form-horizontal .form-group-lg .input-group-addon.form-control,
 .input-group-lg > .input-group-addon,
-.input-group-lg > .input-group-btn > .input-group-addon.btn {
+.input-group-lg > .input-group-btn > .input-group-addon.btn,
+.modal .input-group-lg > .input-group-btn > button.input-group-addon {
   padding: 10px 16px;
   font-size: 18px;
   border-radius: 6px;
@@ -5038,10 +5061,14 @@ tbody.collapse.in {
 .input-group .form-control:first-child,
 .input-group-addon:first-child,
 .input-group-btn:first-child > .btn,
+.modal .input-group-btn:first-child > button,
 .input-group-btn:first-child > .btn-group > .btn,
+.modal .input-group-btn:first-child > .btn-group > button,
 .input-group-btn:first-child > .dropdown-toggle,
 .input-group-btn:last-child > .btn:not(:last-child):not(.dropdown-toggle),
-.input-group-btn:last-child > .btn-group:not(:last-child) > .btn {
+.modal .input-group-btn:last-child > button:not(:last-child):not(.dropdown-toggle),
+.input-group-btn:last-child > .btn-group:not(:last-child) > .btn,
+.modal .input-group-btn:last-child > .btn-group:not(:last-child) > button {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
 }
@@ -5053,10 +5080,14 @@ tbody.collapse.in {
 .input-group .form-control:last-child,
 .input-group-addon:last-child,
 .input-group-btn:last-child > .btn,
+.modal .input-group-btn:last-child > button,
 .input-group-btn:last-child > .btn-group > .btn,
+.modal .input-group-btn:last-child > .btn-group > button,
 .input-group-btn:last-child > .dropdown-toggle,
 .input-group-btn:first-child > .btn:not(:first-child),
-.input-group-btn:first-child > .btn-group:not(:first-child) > .btn {
+.modal .input-group-btn:first-child > button:not(:first-child),
+.input-group-btn:first-child > .btn-group:not(:first-child) > .btn,
+.modal .input-group-btn:first-child > .btn-group:not(:first-child) > button {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
 }
@@ -5070,20 +5101,20 @@ tbody.collapse.in {
   font-size: 0;
   white-space: nowrap;
 }
-.input-group-btn > .btn {
+.input-group-btn > .btn, .modal .input-group-btn > button {
   position: relative;
 }
-.input-group-btn > .btn + .btn {
+.input-group-btn > .btn + .btn, .modal .input-group-btn > button + .btn, .modal .input-group-btn > .btn + button, .modal .input-group-btn > button + button {
   margin-left: -1px;
 }
-.input-group-btn > .btn:hover, .input-group-btn > .btn:focus, .input-group-btn > .btn:active {
+.input-group-btn > .btn:hover, .modal .input-group-btn > button:hover, .input-group-btn > .btn:focus, .modal .input-group-btn > button:focus, .input-group-btn > .btn:active, .modal .input-group-btn > button:active {
   z-index: 2;
 }
-.input-group-btn:first-child > .btn,
+.input-group-btn:first-child > .btn, .modal .input-group-btn:first-child > button,
 .input-group-btn:first-child > .btn-group {
   margin-right: -1px;
 }
-.input-group-btn:last-child > .btn,
+.input-group-btn:last-child > .btn, .modal .input-group-btn:last-child > button,
 .input-group-btn:last-child > .btn-group {
   margin-left: -1px;
 }
@@ -5531,11 +5562,11 @@ tbody.collapse.in {
   margin-top: 8px;
   margin-bottom: 8px;
 }
-.navbar-btn.btn-sm, .btn-group-sm > .navbar-btn.btn {
+.navbar-btn.btn-sm, .btn-group-sm > .navbar-btn.btn, .modal .btn-group-sm > button.navbar-btn {
   margin-top: 10px;
   margin-bottom: 10px;
 }
-.navbar-btn.btn-xs, .btn-group-xs > .navbar-btn.btn {
+.navbar-btn.btn-xs, .btn-group-xs > .navbar-btn.btn, .modal .btn-group-xs > button.navbar-btn {
   margin-top: 14px;
   margin-bottom: 14px;
 }
@@ -5940,7 +5971,7 @@ tbody.collapse.in {
 .label:empty {
   display: none;
 }
-.btn .label {
+.btn .label, .modal button .label {
   position: relative;
   top: -1px;
 }
@@ -6010,11 +6041,11 @@ a.label:hover, a.label:focus {
 .badge:empty {
   display: none;
 }
-.btn .badge {
+.btn .badge, .modal button .badge {
   position: relative;
   top: -1px;
 }
-.btn-xs .badge, .btn-group-xs > .btn .badge {
+.btn-xs .badge, .btn-group-xs > .btn .badge, .modal .btn-group-xs > button .badge {
   top: 0;
   padding: 1px 5px;
 }
@@ -6997,11 +7028,11 @@ button.close {
 .modal-footer:after {
   clear: both;
 }
-.modal-footer .btn + .btn {
+.modal-footer .btn + .btn, .modal-footer .modal button + .btn, .modal .modal-footer button + .btn, .modal-footer .modal .btn + button, .modal .modal-footer .btn + button, .modal-footer .modal button + button, .modal .modal-footer button + button {
   margin-left: 5px;
   margin-bottom: 0;
 }
-.modal-footer .btn-group .btn + .btn {
+.modal-footer .btn-group .btn + .btn, .modal-footer .btn-group .modal button + .btn, .modal .modal-footer .btn-group button + .btn, .modal-footer .btn-group .modal .btn + button, .modal .modal-footer .btn-group .btn + button, .modal-footer .btn-group .modal button + button, .modal .modal-footer .btn-group button + button {
   margin-left: -1px;
 }
 .modal-footer .btn-block + .btn-block {
@@ -7413,7 +7444,7 @@ button.close {
   text-align: center;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
 }
-.carousel-caption .btn {
+.carousel-caption .btn, .carousel-caption .modal button, .modal .carousel-caption button {
   text-shadow: none;
 }
 
@@ -7739,6 +7770,68 @@ button.close {
     display: none !important;
   }
 }
+.modal .modal-content {
+  background-color: #2b3a41;
+  border-radius: 0px;
+  padding: 30px;
+  text-align: center;
+}
+.modal h1 {
+  font-family: "minion-pro-caption", serif;
+  color: #eed9a1;
+  text-transform: capitalize;
+  font-weight: 300;
+  font-style: italic;
+  letter-spacing: 0.02em;
+}
+.modal p {
+  color: white;
+  font-size: 18px;
+}
+.modal i.fa-times {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  color: white;
+}
+.modal button {
+  margin-top: 30px;
+  display: inline-block;
+  color: #eed9a1;
+  font-family: "proxima-nova", sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.modal button.print {
+  margin-right: 15px;
+}
+.modal .share {
+  margin-top: 30px;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 600;
+  line-height: 40px;
+  font-family: "proxima-nova", sans-serif;
+}
+.modal .share h4 {
+  display: inline;
+  margin-right: 5px;
+}
+.modal .share i {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  line-height: 40px;
+  border: 1px solid white;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  border-radius: 50px;
+  margin: 0px 5px;
+  color: white;
+}
+
 .front header {
   background: none;
 }
@@ -7778,7 +7871,7 @@ button.close {
   color: white;
   font-family: "minion-pro-caption", serif;
 }
-.front .main .btn {
+.front .main .btn, .front .main .modal button, .modal .front .main button {
   margin: 25px auto 0 auto;
   float: none;
   padding: 20px 30px;

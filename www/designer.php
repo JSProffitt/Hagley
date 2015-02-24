@@ -1,47 +1,3 @@
-
-<?php
-$products_menu = isset($_POST['productsMenu']) ? $_POST['productsMenu'] : 'Products';
-$designs_menu = isset($_POST['designsMenu']) ? $_POST['designsMenu'] : 'Designs';
-$edit_elements_menu = isset($_POST['editElementsMenu']) ? $_POST['editElementsMenu'] : 'Edit Elements';
-$fb_photos_menu = isset($_POST['fbPhotosMenu']) ? $_POST['fbPhotosMenu'] : 'Add Photos From Facebook';
-$insta_photos_menu = isset($_POST['instaPhotosMenu']) ? $_POST['instaPhotosMenu'] : 'Add Photos From Instagram';
-
-$edit_elements_headline = isset($_POST['editElementsHeadline']) ? $_POST['editElementsHeadline'] : 'Edit Elements';
-$edit_elements_dropdown_none = isset($_POST['editElementsDropdownNone']) ? $_POST['editElementsDropdownNone'] : 'None';
-
-$section_filling = isset($_POST['sectionFilling']) ? $_POST['sectionFilling'] : 'Filling';
-$section_fonts_styles = isset($_POST['sectionFontsStyles']) ? $_POST['sectionFontsStyles'] : 'Fonts & Styles';
-$section_curved_text = isset($_POST['sectionCurvedText']) ? $_POST['sectionCurvedText'] : 'Curved Text';
-$section_helpers = isset($_POST['sectionHelpers']) ? $_POST['sectionHelpers'] : 'Helpers';
-
-$customize_text_align_left = isset($_POST['textAlignLeft']) ? $_POST['textAlignLeft'] : 'Align Left';
-$customize_text_align_center = isset($_POST['textAlignCenter']) ? $_POST['textAlignCenter'] : 'Align Center';
-$customize_text_align_right = isset($_POST['textAlignRight']) ? $_POST['textAlignRight'] : 'Align Right';
-$customize_text_bold = isset($_POST['textBold']) ? $_POST['textBold'] : 'Bold';
-$customize_text_italic = isset($_POST['textItalic']) ? $_POST['textItalic'] : 'Italic';
-
-$curved_text_info = isset($_POST['curvedTextInfo']) ? $_POST['curvedTextInfo'] : 'You can only change the text when you switch to normal text.';
-$curved_text_spacing = isset($_POST['curvedTextSpacing']) ? $_POST['curvedTextSpacing'] : 'Spacing';
-$curved_text_radius = isset($_POST['curvedTextRadius']) ? $_POST['curvedTextRadius'] : 'Radius';
-$curved_text_reverse = isset($_POST['curvedTextReverse']) ? $_POST['curvedTextReverse'] : 'Reverse';
-$curved_text_toggle = isset($_POST['curvedTextToggle']) ? $_POST['curvedTextToggle'] : 'Switch between curved and normal Text';
-
-$customize_center_h = isset($_POST['centerH']) ? $_POST['centerH'] : 'Center Horizontal';
-$customize_center_c = isset($_POST['centerV']) ? $_POST['centerV'] : 'Center Vertical';
-$customize_center_move_down = isset($_POST['moveDown']) ? $_POST['moveDown'] : 'Move It Down';
-$customize_center_move_up = isset($_POST['moveUp']) ? $_POST['moveUp'] : 'Move It Up';
-$customize_reset = isset($_POST['reset']) ? $_POST['reset'] : 'Reset To His Origin';
-$customize_center_trash = isset($_POST['trash']) ? $_POST['trash'] : 'Trash';
-
-$fb_photos_headline = isset($_POST['fbPhotosHeadline']) ? $_POST['fbPhotosHeadline'] : 'Facebook Photos';
-$fb_select_album = isset($_POST['fbSelectAlbum']) ? $_POST['fbSelectAlbum'] : 'Select an album';
-
-$insta_photos_headline = isset($_POST['instaPhotosHeadline']) ? $_POST['instaPhotosHeadline'] : 'Instagram Photos';
-$insta_feed_button = isset($_POST['instaFeedButton']) ? $_POST['instaFeedButton'] : 'My Feed';
-$insta_recent_images_button = isset($_POST['instaRecentImagesButton']) ? $_POST['instaRecentImagesButton'] : 'My Recent Images';
-$insta_load_next = isset($_POST['instaLoadNext']) ? $_POST['instaLoadNext'] : 'Load next Stack';
-
-?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -82,6 +38,12 @@ $insta_load_next = isset($_POST['instaLoadNext']) ? $_POST['instaLoadNext'] : 'L
 	    timeoutDuration = 600000;
 
 	    jQuery(document).ready(function(){
+
+
+	    	// Modal Window
+	    	$('#myModal').on('shown.bs.modal', function () {
+			   $('#myInput').focus()
+			})
 
 	    	// start the timer
 	    	startTimer(timeoutDuration);
@@ -201,7 +163,7 @@ $insta_load_next = isset($_POST['instaLoadNext']) ? $_POST['instaLoadNext'] : 'L
 		function startTimer(duration)
 		{
 			idleTimer = window.setTimeout(function() {
-	    		location.replace('intro.php');
+	    		location.replace('index.php');
 	    	}, duration);
 
 		}
@@ -212,7 +174,7 @@ $insta_load_next = isset($_POST['instaLoadNext']) ? $_POST['instaLoadNext'] : 'L
 <header>
 	<img src="images/logo.jpg" class="logo" />
 	<h1>Create Your Own Rug!</h1>
-	<a href="#" class="btn done">Done!</a>
+	<a class="btn done" data-toggle="modal" data-target="#myModal">Done!</a>
 </header>
 
 <!--////////////
@@ -445,7 +407,9 @@ $insta_load_next = isset($_POST['instaLoadNext']) ? $_POST['instaLoadNext'] : 'L
 			  		</div>
 			  		
 				</div><!-- end of fpd-design -->	
+
 		  	</div><!-- end of clothing-designer-->  
+		  	
 		  	
 
 			<!-- The form recreation -->
@@ -453,14 +417,36 @@ $insta_load_next = isset($_POST['instaLoadNext']) ? $_POST['instaLoadNext'] : 'L
 			<form action="php/recreation.php" id="recreation-form" method="post">
 			<input type="hidden" name="recreation_product" value="" />
 			</form>
+		
+
+			<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			  <div class="modal-dialog">
+			    <div class="modal-content">
+
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><i aria-hidden="true" class="fa fa-times"></i></button>
+
+					<h1 id="myModalLabel">Your Almost Done!</h1>
+					<p>Print, Email, or Share your rug.</p>
+
+					<button id="print-button" type="button" class="btn print">Print</button>
+				    <button id="send-image-mail-php" type="button" class="btn email">Email</button>
+				    <div class="share">
+						<h4>Share:</h4>
+						<a id="facebook" href="#"><i class="fa fa-facebook"></i></a>
+						<a id="twitter" href="#"><i class="fa fa-twitter"></i></a>
+						<a id="pinterest" href="#"><i class="fa fa-pinterest"></i></a>
+						<a id="instagram" href="#"><i class="fa fa-instagram"></i></a>
+					</div>
+
+			    </div>
+			  </div>
+			</div>
 
 	</div><!--end of row-->
 </section>
 
 
-        
 
 
-
-    </body>
+</body>
 </html>
