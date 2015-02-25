@@ -7770,6 +7770,33 @@ button.close {
     display: none !important;
   }
 }
+.modal {
+    /*.share {
+        margin-top: 30px;
+        color: white;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        font-weight: 600;
+        line-height: 40px;
+        font-family: $proxima;
+
+        h4 {
+            display: inline;
+            margin-right: 5px;
+        }
+
+        i {
+            display: inline-block;
+            height: 40px;
+            width: 40px;
+            line-height: 40px;
+            border: 1px solid white;
+            @include border-radius(50px);
+            margin: 0px 5px;
+            color: white;
+        }
+    }*/
+}
 .modal .modal-content {
   background-color: #2b3a41;
   border-radius: 0px;
@@ -7805,31 +7832,28 @@ button.close {
 .modal button.print {
   margin-right: 15px;
 }
-.modal .share {
+.modal form {
   margin-top: 30px;
-  color: white;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  font-weight: 600;
-  line-height: 40px;
-  font-family: "proxima-nova", sans-serif;
+  margin-bottom: 10px;
 }
-.modal .share h4 {
-  display: inline;
-  margin-right: 5px;
-}
-.modal .share i {
-  display: inline-block;
+.modal form input {
+  border: none;
+  outline: none;
   height: 40px;
-  width: 40px;
-  line-height: 40px;
-  border: 1px solid white;
-  -webkit-border-radius: 50px;
-  -moz-border-radius: 50px;
-  -ms-border-radius: 50px;
-  border-radius: 50px;
-  margin: 0px 5px;
-  color: white;
+  padding: 0px 10px;
+  width: 70%;
+  float: left;
+}
+.modal form button {
+  width: 30%;
+  float: left;
+  margin: 0px;
+  height: 40px;
+}
+.modal form:after {
+  content: " ";
+  display: block;
+  clear: both;
 }
 
 .front header {
