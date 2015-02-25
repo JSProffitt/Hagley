@@ -20,9 +20,9 @@
 	<!-- HTML5 canvas library -->
 	<script src="js/fabric.js" type="text/javascript"></script>
 	<!-- Third-party plugins that are needed for Fancy Product Designer -->
-	<script src="js/plugins.min.js" type="text/javascript"></script>
+	<script src="js/plugins.js" type="text/javascript"></script>
 	<!-- The plugin itself -->
-    <script src="js/jquery.fancyProductDesigner.min.js" type="text/javascript"></script>
+    <script src="js/jquery.fancyProductDesigner.js" type="text/javascript"></script>
     <!-- Include only if you would like to create a pdf from your product -->
     <script src="jspdf/jspdf.min.js" type="text/javascript"></script>
 
@@ -410,14 +410,6 @@
 
 		  	</div><!-- end of clothing-designer-->  
 		  	
-		  	
-
-			<!-- The form recreation -->
-			<input type="file" id="design-upload" style="display: none;" />
-			<form action="php/recreation.php" id="recreation-form" method="post">
-			<input type="hidden" name="recreation_product" value="" />
-			</form>
-		
 
 			<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 			  <div class="modal-dialog">
@@ -426,21 +418,23 @@
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><i aria-hidden="true" class="fa fa-times"></i></button>
 
 					<h1 id="myModalLabel">Your Almost Done!</h1>
-					<p>Print, Email, or Share your rug.</p>
+					<p>Print or Email your rug.</p>
 
 					<button id="print-button" type="button" class="btn print">Print</button>
-				    <button id="send-image-mail-php" type="button" class="btn email">Email</button>
-				    <div class="share">
-						<h4>Share:</h4>
-						<a id="facebook" href="#"><i class="fa fa-facebook"></i></a>
-						<a id="twitter" href="#"><i class="fa fa-twitter"></i></a>
-						<a id="pinterest" href="#"><i class="fa fa-pinterest"></i></a>
-						<a id="instagram" href="#"><i class="fa fa-instagram"></i></a>
-					</div>
+				    <button type="button" class="btn">Email</button>
 
+				    <form method="post">
+					<input type="email" name="email" placeholder="Enter E-mail Address"  />
+					<button id="send-image-mail-php" type="button" class="btn email">Submit</button>
+					</form>
+
+					<div style="clear:both;"></div>
+				   
 			    </div>
 			  </div>
 			</div>
+
+
 
 	</div><!--end of row-->
 </section>
