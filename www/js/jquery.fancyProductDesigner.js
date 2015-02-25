@@ -3159,7 +3159,7 @@
 
 						popup.document.title = "Print Image";
 						for(var j=0; j < images.length; ++j) {
-							$(popup.document.body).append('<img src="'+images[j].src+'" />');
+							$(popup.document.body).append('<img src="'+images[j].src+'" style="margin:auto; display:block;" />');
 						}
 
 						setTimeout(function() {
@@ -3584,7 +3584,7 @@
 			sidebarNavSize: 50, //only for flat layout
 			sidebarContentWidth: 200, //only for flat/vertical layout
 			sidebarSize: 700, //sidebar width for flat layout, width/height for flat layout, min. height of flat/horizontal layout is 600
-			productStageWidth: 600, //for all layouts
+			productStageWidth: 750, //for all layouts
 			productStageHeight: 600 //for all layouts
 		},
 		labels: { //different labels used for the UI
