@@ -20,6 +20,7 @@
 
 	<script src="js/jquery.vegas.min.js" type="text/javascript"></script>
     <script type="text/javascript">
+
     jQuery(document).ready(function() {
         // Background Image for Header
         jQuery.vegas({
