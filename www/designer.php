@@ -37,13 +37,22 @@
 	    // Define timeout duration
 	    timeoutDuration = 600000;
 
-	    jQuery(document).ready(function(){
+	    jQuery(document).ready(function($){
+
+	    	// Hide email form on load
+	    	$('form#email').hide();
+
 
 
 	    	// Modal Window
 	    	$('#myModal').on('shown.bs.modal', function () {
 			   $('#myInput').focus()
 			})
+
+			// Show form after clicking email button
+			$('#myModal #email-button').click(function() {
+				$('form#email').fadeIn('slow');
+			});
 
 	    	// start the timer
 	    	startTimer(timeoutDuration);
@@ -117,9 +126,20 @@
 			});
 
 			//send image via mail
-			$('#send-image-mail-php').click(function() {
-				$.post( "php/send_image_via_mail.php", { base64_image: yourDesigner.getProductDataURL()} );
-			});
+			$('form#email').submit(function(event) {
+				event.preventDefault();
+				var emailTo = $("input[name='email']").val();
+				var emailsend = $.post( "php/send_image_via_mail.php", { base64_image: yourDesigner.getProductDataURL(), email: emailTo} );
+
+				emailsend.done(function(data) {
+					console.log(data);
+				});
+
+				emailsend.fail(function() {
+					console.log('error');
+				})
+			})
+			
 
 			//upload image
 			document.getElementById('design-upload').onchange = function (e) {
@@ -421,11 +441,11 @@
 					<p>Print or Email your rug.</p>
 
 					<button id="print-button" type="button" class="btn print">Print</button>
-				    <button type="button" class="btn">Email</button>
+				    <button id="email-button" type="button" class="btn">Email</button>
 
-				    <form method="post">
+				    <form method="post" id="email" action="php/send_image_via_mail.php">
 					<input type="email" name="email" placeholder="Enter E-mail Address"  />
-					<button id="send-image-mail-php" type="button" class="btn email">Submit</button>
+					<input id="send-image-mail-php" type="submit" class="btn email">Submit</button>
 					</form>
 
 					<div style="clear:both;"></div>
