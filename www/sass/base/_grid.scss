@@ -24,7 +24,7 @@ header, section, article, aside, nav, footer, .row, .container-common {
 	width: 100%;
 	height: auto;
 	position: relative;
-	@include grid-span(12);
+	@include grid-span(12,1);
 }
 
 
