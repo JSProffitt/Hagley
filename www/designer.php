@@ -209,7 +209,6 @@
 	    			<img src="images/rugs/1/base.png" title="Base" data-parameters='{"x": 375, "y": 295, "colors": "#ededed"}' />
 	    			<img src="images/rugs/1/texture.png" title="Texture" data-parameters='{"x": 375, "y": 295}' />
 	    			<img src="images/rugs/1/border.png" title="Border" data-parameters='{"x": 375, "y": 295}' />
-	    			<img src="images/rugs/1/center.png" title="Center" data-parameters='{"x": 375, "y": 295}' />
 			  		<span title="Any Text" data-parameters='{"boundingBox": "Base", "x": 375, "y": 295, "zChangeable": true, "removable": true, "draggable": false, "rotatable": false, "resizable": false, "colors": "#000000"}' >Enter your name</span>
 				</div>
 
@@ -217,10 +216,22 @@
 	    			<img src="images/rugs/2/base.png" title="Base" data-parameters='{"x": 375, "y": 295, "colors": "#ededed"}' />
 	    			<img src="images/rugs/2/texture.png" title="Texture" data-parameters='{"x": 375, "y": 295}' />
 	    			<img src="images/rugs/2/border.png" title="Border" data-parameters='{"x": 375, "y": 295}' />
-	    			<img src="images/rugs/2/center.png" title="Center" data-parameters='{"x": 375, "y": 295}' />
 			  		<span title="Any Text" data-parameters='{"boundingBox": "Base", "x": 375, "y": 295, "zChangeable": true, "removable": false, "draggable": false, "rotatable": false, "resizable": false, "colors": "#000000"}' >Enter your name</span>
 				</div>
 				
+				<div class="fpd-product" title="Rug" data-thumbnail="images/rugs/3/rug.png">
+	    			<img src="images/rugs/3/base.png" title="Base" data-parameters='{"x": 375, "y": 295, "colors": "#ededed"}' />
+	    			<img src="images/rugs/3/texture.png" title="Texture" data-parameters='{"x": 375, "y": 295}' />
+	    			<img src="images/rugs/3/border.png" title="Border" data-parameters='{"x": 375, "y": 295}' />
+			  		<span title="Any Text" data-parameters='{"boundingBox": "Base", "x": 375, "y": 295, "zChangeable": true, "removable": false, "draggable": false, "rotatable": false, "resizable": false, "colors": "#000000"}' >Enter your name</span>
+				</div>
+
+				<div class="fpd-product" title="Rug" data-thumbnail="images/rugs/4/rug.png">
+	    			<img src="images/rugs/4/base.png" title="Base" data-parameters='{"x": 375, "y": 295, "colors": "#ededed"}' />
+	    			<img src="images/rugs/4/texture.png" title="Texture" data-parameters='{"x": 375, "y": 295}' />
+	    			<img src="images/rugs/4/border.png" title="Border" data-parameters='{"x": 375, "y": 295}' />
+			  		<span title="Any Text" data-parameters='{"boundingBox": "Base", "x": 375, "y": 295, "zChangeable": true, "removable": false, "draggable": false, "rotatable": false, "resizable": false, "colors": "#000000"}' >Enter your name</span>
+				</div>
 			
 
 				<!--/////////////
@@ -445,7 +456,7 @@
 
 				    <form method="post" id="email" action="php/send_image_via_mail.php">
 					<input type="email" name="email" placeholder="Enter E-mail Address"  />
-					<input id="send-image-mail-php" type="submit" class="btn email">Submit</button>
+					<input id="send-image-mail-php" type="submit" class="btn email submit">Submit</button>
 					</form>
 
 					<div style="clear:both;"></div>
