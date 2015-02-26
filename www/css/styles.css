@@ -7844,7 +7844,7 @@ button.close {
   width: 70%;
   float: left;
 }
-.modal form button {
+.modal form input.submit {
   width: 30%;
   float: left;
   margin: 0px;
