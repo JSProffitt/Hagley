@@ -54,6 +54,7 @@
 
 			$('#myModal').on('hidden.bs.modal', function() {
 				$('form#email').hide();
+				$('a.finished').hide();
 			});
 
 			// Show form after clicking email button
@@ -79,9 +80,10 @@
 
 	    	//print button
 			$('#print-button').click(function(){
+				$('form#email').fadeOut();
 				yourDesigner.print();
 				$.post( "php/log.php", { action: "print", status: "success"} );
-				$('a.finished').show();
+				window.setTimeout("$('a.finished').fadeIn()", 1500);
 				return false;
 			});
 
