@@ -62,6 +62,7 @@
             float: left;
             margin: 0px;
             height: 40px;
+            font-weight: 700;
         }
 
         &:after {
@@ -69,6 +70,13 @@
             display: block;
             clear:both;
         }
+    }
+
+    a.finished {
+        background-color: $light-blue;
+        display: table;
+        margin: 30px auto 0px auto!important;
+        font-weight: 700;
     }
 
     /*.share {
@@ -146,6 +154,7 @@
             margin: 25px auto 0 auto;
             float: none;
             padding: 20px 30px;
+            font-weight: 700;
 
         }
     }

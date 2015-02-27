@@ -459,6 +459,7 @@
 					<input id="send-image-mail-php" type="submit" class="btn email submit">Submit</button>
 					</form>
 
+					<a href="index.php" class="btn finished">All Finished!</a>
 					<div style="clear:both;"></div>
 				   
 			    </div>
