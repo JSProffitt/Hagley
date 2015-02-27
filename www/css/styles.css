@@ -7849,11 +7849,18 @@ button.close {
   float: left;
   margin: 0px;
   height: 40px;
+  font-weight: 700;
 }
 .modal form:after {
   content: " ";
   display: block;
   clear: both;
+}
+.modal a.finished {
+  background-color: #386c79;
+  display: table;
+  margin: 30px auto 0px auto !important;
+  font-weight: 700;
 }
 
 .front header {
@@ -7899,6 +7906,7 @@ button.close {
   margin: 25px auto 0 auto;
   float: none;
   padding: 20px 30px;
+  font-weight: 700;
 }
 .front ol {
   display: table;
