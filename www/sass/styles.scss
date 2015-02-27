@@ -110,7 +110,7 @@
 
     .main {
         margin: 10% auto 0px auto;
-        padding: 0px 20%;
+        padding: 0px 10%;
         height: 100%;
         width: 100%;
         display: block;
@@ -147,6 +147,22 @@
             float: none;
             padding: 20px 30px;
 
+        }
+    }
+
+    ol {
+        display: table;
+        width: auto;
+        margin: 0 auto;
+
+        li {
+            list-style-type: decimal;
+            font-size: 22px;
+            line-height: 30px;
+            color:white;
+            font-family: $minion;
+            text-align: left;
+            margin-left: 50px;
         }
     }
 }

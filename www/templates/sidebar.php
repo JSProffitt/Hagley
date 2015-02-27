@@ -46,8 +46,8 @@ $insta_load_next = isset($_POST['instaLoadNext']) ? $_POST['instaLoadNext'] : 'L
 
 	<!-- Navigation -->
 	<div class="fpd-navigation">
-		<a class="fpd-nav-item" data-target=".fpd-products" title="<?php echo $products_menu; ?>"><i class="fa fa-book"></i><span>Products</span></a>
-		<a class="fpd-nav-item" data-target=".fpd-designs" title="<?php echo $designs_menu; ?>"><i class="fa fa-folder-open"></i><span>Designs</span></a>
+		<a class="fpd-nav-item" data-target=".fpd-products" title="<?php echo $products_menu; ?>"><i class="fa fa-book"></i><span>Rugs</span></a>
+		<a class="fpd-nav-item" data-target=".fpd-designs" title="<?php echo $designs_menu; ?>"><i class="fa fa-folder-open"></i><span>Images</span></a>
 		<a class="fpd-nav-item" data-target=".fpd-edit-elements" title="<?php echo $edit_elements_menu; ?>"><i class="fa fa-edit"></i><span>Elements</span></a>
 	</div>
 
