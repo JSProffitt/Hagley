@@ -47,7 +47,8 @@
 		<div class="divider"></div>
 		<ol>
 			<li>Select a rug from the Rugs area</li>
-			<li>Select Images from the Images area</li>
+			<li>Select images from the Images area</li>
+			<li>Choose from over 200 images from any of the six image categories</li>
 			<li>Images can be sized, rotated and have different colors</li>
 			<li>Arrange images on the rug to tell your story.</li>
 			<li>Enter you name and hit the Done! button at the top.</li>
