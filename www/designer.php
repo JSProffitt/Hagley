@@ -42,6 +42,8 @@
 	    	// Hide email form on load
 	    	$('form#email').hide();
 
+	    	// Hide email form on load
+	    	$('a.finished').hide();
 
 
 	    	// Modal Window
@@ -74,6 +76,7 @@
 			$('#print-button').click(function(){
 				yourDesigner.print();
 				$.post( "php/log.php", { action: "print", status: "success"} );
+				$('a.finished').show();
 				return false;
 			});
 
@@ -133,6 +136,7 @@
 				var emailsend = $.post( "php/send_image_via_mail.php", { base64_image: yourDesigner.getProductDataURL(), email: emailTo} )
 				.done(function(data) {
 					$.post( "php/log.php", { action: "email", status: "success"} );
+					$('a.finished').show();
 				})
 				.fail(function() {
 					console.log('error');
