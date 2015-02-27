@@ -7844,16 +7844,23 @@ button.close {
   width: 70%;
   float: left;
 }
-.modal form button {
+.modal form input.submit {
   width: 30%;
   float: left;
   margin: 0px;
   height: 40px;
+  font-weight: 700;
 }
 .modal form:after {
   content: " ";
   display: block;
   clear: both;
+}
+.modal a.finished {
+  background-color: #386c79;
+  display: table;
+  margin: 30px auto 0px auto !important;
+  font-weight: 700;
 }
 
 .front header {
@@ -7866,7 +7873,7 @@ button.close {
 }
 .front .main {
   margin: 10% auto 0px auto;
-  padding: 0px 20%;
+  padding: 0px 10%;
   height: 100%;
   width: 100%;
   display: block;
@@ -7899,6 +7906,21 @@ button.close {
   margin: 25px auto 0 auto;
   float: none;
   padding: 20px 30px;
+  font-weight: 700;
+}
+.front ol {
+  display: table;
+  width: auto;
+  margin: 0 auto;
+}
+.front ol li {
+  list-style-type: decimal;
+  font-size: 22px;
+  line-height: 30px;
+  color: white;
+  font-family: "minion-pro-caption", serif;
+  text-align: left;
+  margin-left: 50px;
 }
 
 .vegas-loading {

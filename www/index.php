@@ -51,8 +51,17 @@
 
 		<h1>Create a Rug!</h1>
 		<div class="divider"></div>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id urna massa. Vestibulum non congue odio. </p>
-		<a href="#" class="btn">Get Started!</a>
+
+		<ol>
+			<li>Select a rug from the Rugs area</li>
+			<li>Select images from the Images area</li>
+			<li>Choose from over 200 images from any of the six image categories</li>
+			<li>Images can be sized, rotated and have different colors</li>
+			<li>Arrange images on the rug to tell your story.</li>
+			<li>Enter you name and hit the Done! button at the top.</li>
+			<li>Email or print your rug.</li>
+		</ol>
+		<a href="designer.php" class="btn">Tell Us Your Story!</a>
 		
 	</div><!--end of row-->
 </section>

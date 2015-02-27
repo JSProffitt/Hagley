@@ -57,11 +57,12 @@
             width: 70%;
             float: left;
         }
-        button {
+        input.submit {
             width: 30%;
             float: left;
             margin: 0px;
             height: 40px;
+            font-weight: 700;
         }
 
         &:after {
@@ -69,6 +70,13 @@
             display: block;
             clear:both;
         }
+    }
+
+    a.finished {
+        background-color: $light-blue;
+        display: table;
+        margin: 30px auto 0px auto!important;
+        font-weight: 700;
     }
 
     /*.share {
@@ -110,7 +118,7 @@
 
     .main {
         margin: 10% auto 0px auto;
-        padding: 0px 20%;
+        padding: 0px 10%;
         height: 100%;
         width: 100%;
         display: block;
@@ -146,7 +154,24 @@
             margin: 25px auto 0 auto;
             float: none;
             padding: 20px 30px;
+            font-weight: 700;
 
+        }
+    }
+
+    ol {
+        display: table;
+        width: auto;
+        margin: 0 auto;
+
+        li {
+            list-style-type: decimal;
+            font-size: 22px;
+            line-height: 30px;
+            color:white;
+            font-family: $minion;
+            text-align: left;
+            margin-left: 50px;
         }
     }
 }
