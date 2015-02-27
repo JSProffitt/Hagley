@@ -1888,7 +1888,7 @@
 				popupTop = (window.screen.height - 500) / 2;
 
 			var popup = window.open(options.phpDirectory+'/instagram_auth.php', '', 'width=700,height=500,left='+popupLeft+',top='+popupTop+'');
-			_popupBlockerAlert(popup);
+			// _popupBlockerAlert(popup);
 
 			popup.onload = new function() {
 
@@ -2163,13 +2163,13 @@
 			}
 		};
 
-		var _popupBlockerAlert = function(popup) {
+		/*var _popupBlockerAlert = function(popup) {
 
 			if (popup == null || typeof(popup)=='undefined') {
 				alert('Please disable your pop-up blocker and try again.');
 			}
 
-		};
+		};*/
 
 		var _isUrl = function(s) {
 			var regexp = /(ftp|http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?/
@@ -3154,16 +3154,18 @@
 					//add images to popup and print popup
 					if(imageLoop == viewsDataURL.length) {
 
-						var popup = window.open('','','width='+images[0].width+',height='+(images[0].height*viewsDataURL.length)+',location=no,menubar=no,scrollbars=yes,status=no,toolbar=no');
-						_popupBlockerAlert(popup);
+						// var popup = window.open('','','width='+images[0].width+',height='+(images[0].height*viewsDataURL.length)+',location=no,menubar=no,scrollbars=yes,status=no,toolbar=no');
+						// _popupBlockerAlert(popup);
 
-						popup.document.title = "Print Image";
+						// popup.document.title = "Print Image";
 						for(var j=0; j < images.length; ++j) {
-							$(popup.document.body).append('<img src="'+images[j].src+'" style="margin:auto; display:block;" />');
+							// $(popup.document.body).append('<img src="'+images[j].src+'" style="margin:auto; display:block;" />');
+							$('#printview').contents().find('body').append('<img src="'+images[j].src+'" style="margin:auto; display:block;" />');
 						}
 
 						setTimeout(function() {
-							popup.print();
+							// popup.print();
+							$('#printview').get(0).contentWindow.print();
 						}, 1000);
 
 					}
@@ -3193,7 +3195,7 @@
 				if(openInPopup) {
 
 					var popup = window.open('','','width='+this.width+',height='+this.height+',location=no,menubar=no,scrollbars=yes,status=no,toolbar=no');
-					_popupBlockerAlert(popup);
+					// _popupBlockerAlert(popup);
 
 					popup.document.title = "Product Image";
 					$(popup.document.body).append('<img src="'+this.src+'" />');

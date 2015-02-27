@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0, minimal-ui"/>
+	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<title>Hagley | Create a Custom Rug</title>
 	<link rel="icon" type="image/png" href="/images/favicon.ico" />
@@ -48,6 +49,10 @@
 	    	$('#myModal').on('shown.bs.modal', function () {
 			   $('#myInput').focus()
 			})
+
+			$('#myModal').on('hidden.bs.modal', function() {
+				$('form#email').hide();
+			});
 
 			// Show form after clicking email button
 			$('#myModal #email-button').click(function() {
@@ -458,7 +463,12 @@
 	</div><!--end of row-->
 </section>
 
-
+<iframe id="printview">
+	<html>
+		<body>
+		</body>
+	</html>
+</iframe>
 
 
 </body>

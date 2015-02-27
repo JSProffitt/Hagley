@@ -4,6 +4,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0, minimal-ui"/>
+	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<title>Hagley | Create a Custom Rug</title>
 	<link rel="icon" type="image/png" href="/images/favicon.ico" />
@@ -21,11 +22,16 @@
 	<script src="js/jquery.vegas.min.js" type="text/javascript"></script>
     <script type="text/javascript">
 
-    jQuery(document).ready(function() {
+    jQuery(document).ready(function($) {
         // Background Image for Header
-        jQuery.vegas({
+        $.vegas({
             src:'images/bkg-front.jpg'
         });
+
+        $('a.btn').click(function(){
+        	location.replace('designer.php');
+        })
+
     });
 	</script>
 
@@ -46,7 +52,7 @@
 		<h1>Create a Rug!</h1>
 		<div class="divider"></div>
 		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id urna massa. Vestibulum non congue odio. </p>
-		<a href="designer.php" class="btn">Get Started!</a>
+		<a href="#" class="btn">Get Started!</a>
 		
 	</div><!--end of row-->
 </section>
