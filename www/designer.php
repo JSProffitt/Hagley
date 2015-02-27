@@ -73,6 +73,7 @@
 	    	//print button
 			$('#print-button').click(function(){
 				yourDesigner.print();
+				$.post( "php/log.php", { action: "print", status: "success"} );
 				return false;
 			});
 
@@ -129,15 +130,13 @@
 			$('form#email').submit(function(event) {
 				event.preventDefault();
 				var emailTo = $("input[name='email']").val();
-				var emailsend = $.post( "php/send_image_via_mail.php", { base64_image: yourDesigner.getProductDataURL(), email: emailTo} );
-
-				emailsend.done(function(data) {
-					console.log(data);
-				});
-
-				emailsend.fail(function() {
-					console.log('error');
+				var emailsend = $.post( "php/send_image_via_mail.php", { base64_image: yourDesigner.getProductDataURL(), email: emailTo} )
+				.done(function(data) {
+					$.post( "php/log.php", { action: "email", status: "success"} );
 				})
+				.fail(function() {
+					console.log('error');
+				});
 			})
 			
 
