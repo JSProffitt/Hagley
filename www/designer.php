@@ -43,8 +43,8 @@
 	    	// Hide email form on load
 	    	$('form#email').hide();
 
-	    	// Hide email form on load
-	    	$('a.finished').hide();
+	    	// Set finshed button text on load
+	    	$('a.finished').html('Quit without saving');
 
 
 	    	// Modal Window
@@ -62,6 +62,11 @@
 				$('form#email').fadeIn('slow');
 			});
 
+			// Redirect after clicking All Finished button
+			$('a.finished').click(function(){
+				location.replace('index.php');
+			});
+
 	    	// start the timer
 	    	startTimer(timeoutDuration);
 
@@ -73,7 +78,7 @@
 
 	    	var yourDesigner = $('#clothing-designer').fancyProductDesigner({
 	    		editorMode: false,
-	    		fonts: ['Cursive', 'Arial', 'Fearless', 'Helvetica', 'Times New Roman', 'Verdana', 'Geneva', 'Gorditas'],
+	    		fonts: ['Jenson:adobe-jenson-pro-display', 'Lust Script:lust-script-display', 'Cursive', 'Helvetica'],
 	    		customTextParameters: {colors: false, removable: true, resizable: true, draggable: true, rotatable: true, autoCenter: true, boundingBox: "Base"},
 	    		customImagesParameters: {draggable: true, removable: true, colors: '#000', autoCenter: true, boundingBox: "Base"}
 	    	}).data('fancy-product-designer');
@@ -83,6 +88,7 @@
 				$('form#email').fadeOut();
 				yourDesigner.print();
 				$.post( "php/log.php", { action: "print", status: "success"} );
+				$('a.finished').html('All finished!');
 				window.setTimeout("$('a.finished').fadeIn()", 1500);
 				return false;
 			});
@@ -143,6 +149,7 @@
 				var emailsend = $.post( "php/send_image_via_mail.php", { base64_image: yourDesigner.getProductDataURL(), email: emailTo} )
 				.done(function(data) {
 					$.post( "php/log.php", { action: "email", status: "success"} );
+					$('a.finished').html('All finished!');
 					$('a.finished').show();
 				})
 				.fail(function() {
@@ -458,7 +465,7 @@
 
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><i aria-hidden="true" class="fa fa-times"></i></button>
 
-					<h1 id="myModalLabel">Your Almost Done!</h1>
+					<h1 id="myModalLabel">You're Almost Done!</h1>
 					<p>Print or Email your rug.</p>
 
 					<button id="print-button" type="button" class="btn print">Print</button>
@@ -469,7 +476,7 @@
 					<input id="send-image-mail-php" type="submit" class="btn email submit">Submit</button>
 					</form>
 
-					<a href="index.php" class="btn finished">All Finished!</a>
+					<a href="#" class="btn finished">All Finished!</a>
 					<div style="clear:both;"></div>
 				   
 			    </div>

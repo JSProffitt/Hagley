@@ -54,10 +54,8 @@
 
 		<ol>
 			<li>Select a rug from the Rugs area</li>
-			<li>Select images from the Images area</li>
-			<li>Choose from over 200 images from any of the six image categories</li>
+			<li>Select, style and arrange from any of the six categories in the Image area.</li>
 			<li>Images can be sized, rotated and have different colors</li>
-			<li>Arrange images on the rug to tell your story.</li>
 			<li>Enter you name and hit the Done! button at the top.</li>
 			<li>Email or print your rug.</li>
 		</ol>

@@ -943,10 +943,21 @@
 
 				options.fonts.sort();
 				for(var i=0; i < options.fonts.length; ++i) {
-					var fontName = options.fonts[i].indexOf(':') == -1 ? options.fonts[i] : options.fonts[i].substring(0, options.fonts[i].indexOf(':'));
-					if($fontsDropdown.children('option[value="'+fontName+'"]').size() == 0) {
-						$fontsDropdown.append('<option value="'+fontName+'" style="font-family: '+fontName+';">'+fontName+'</option>');
+					// var fontName = options.fonts[i].indexOf(':') == -1 ? options.fonts[i] : options.fonts[i].substring(0, options.fonts[i].indexOf(':'));
+					if (options.fonts[i].indexOf(':') == -1) 
+						var fontName = options.fonts[i];
+						if($fontsDropdown.children('option[value="'+fontName+'"]').size() == 0) {
+							$fontsDropdown.append('<option value="'+fontName+'" style="font-family: '+fontName+';">'+fontName+'</option>');
+						}
+					else {
+						var fontLabel = options.fonts[i].substring(0, options.fonts[i].indexOf(':'));
+						var fontName = options.fonts[i].substring(options.fonts[i].indexOf(':')+1);
+						if($fontsDropdown.children('option[value="'+fontName+'"]').size() == 0) {
+							$fontsDropdown.append('<option value="'+fontName+'" style="font-family: '+fontName+';">'+fontLabel+'</option>');
+						}
 					}
+
+					
 				}
 
 				if(options._useChosen) {

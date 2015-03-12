@@ -15,7 +15,7 @@ $bound_text = 	md5(date('r', time()));
 $bound = 	"--".$bound_text."\r\n";
 $bound_last = 	"--".$bound_text."--\r\n";
 
-$headers = 	"From: info@hagley.org\r\n";//set here the sending mail address
+$headers = 	"From: mystoryrug@hagley.org\r\n";//set here the sending mail address
 $headers .= 	"MIME-Version: 1.0\r\n"
   	."Content-Type: multipart/mixed; boundary=\"$bound_text\"";
 
@@ -24,7 +24,14 @@ $message .= 	"If you can see this MIME than your client doesn't accept MIME type
 
 $message .= 	"Content-Type: text/html; charset=\"iso-8859-1\"\r\n"
   	."Content-Transfer-Encoding: 7bit\r\n\r\n"
-  	."<h2>Your Custom Masterpiece</h2>\r\n" //set here the mail text
+  	."<h2>Your Custom Masterpiece</h2>\r\n 
+    Thanks for completing your story using the Hagley Story Rug Application.
+We'd love if you'd share it on social media and let others know about
+your experience at the exhibit.
+\r\n\r\n
+Thanks,
+\r\n\r\n
+The Hagley Museum" //set here the mail text
   	.$bound;
 
 $message .= 	"Content-Type: image/png; name=\"mail_product.png\"\r\n"
