@@ -17,7 +17,7 @@ $bound_last = 	"--".$bound_text."--\r\n";
 
 $headers = 	"From: mystoryrug@hagley.org\r\n";//set here the sending mail address
 $headers .= 	"MIME-Version: 1.0\r\n"
-  	."Content-Type: {\"multipart/alternative\"}; boundary=\"$bound_text\"";
+  	."Content-Type: multipart/alternative; boundary=\"$bound_text\"";
 
 $message .= 	"If you can see this MIME than your client doesn't accept MIME types!\r\n"
   	.$bound;
@@ -34,9 +34,9 @@ Thanks,
 The Hagley Museum" //set here the mail text
   	.$bound;
 
-$message .= 	"Content-Type: {\"image/png\"};\r\n name=\"mail_product.png\"\r\n"
+$message .= 	"Content-Type: image/png; name=\"mail_product.png\"\r\n"
   	."Content-Transfer-Encoding: base64\r\n"
-  	."Content-disposition: attachment;\r\n filename=\"mail_product.png\"\r\n"
+  	."Content-disposition: attachment;\r\n file=\"mail_product.png\"\r\n"
   	."\r\n"
   	.chunk_split($base64_str)
   	.$bound_last;
