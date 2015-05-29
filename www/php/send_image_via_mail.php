@@ -34,9 +34,9 @@ Thanks,
 The Hagley Museum" //set here the mail text
   	.$bound;
 
-$message .= 	"Content-Type: {\"application\octet-stream\"};\n name=\"mail_product.png\"\r\n"
+$message .= 	"Content-Type: {\"application\octet-stream\"};\r\n name=\"mail_product.png\"\r\n"
   	."Content-Transfer-Encoding: base64\r\n"
-  	."Content-disposition: attachment; file=\"mail_product.png\"\r\n"
+  	."Content-disposition: attachment;\r\n filename=\"mail_product.png\"\r\n"
   	."\r\n"
   	.chunk_split($base64_str)
   	.$bound_last;
