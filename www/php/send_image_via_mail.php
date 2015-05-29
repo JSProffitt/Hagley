@@ -34,7 +34,7 @@ Thanks,
 The Hagley Museum" //set here the mail text
   	.$bound;
 
-$message .= 	"Content-Type: image/png; name=\"mail_product.png\"\r\n"
+$message .= 	"Content-Type: {\"application\octet-stream\"};\n name=\"mail_product.png\"\r\n"
   	."Content-Transfer-Encoding: base64\r\n"
   	."Content-disposition: attachment; file=\"mail_product.png\"\r\n"
   	."\r\n"
