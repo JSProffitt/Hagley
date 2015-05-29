@@ -17,7 +17,7 @@ $bound_last = 	"--".$bound_text."--\r\n";
 
 $headers = 	"From: mystoryrug@hagley.org\r\n";//set here the sending mail address
 $headers .= 	"MIME-Version: 1.0\r\n"
-  	."Content-Type: multipart/mixed; boundary=\"$bound_text\"";
+  	."Content-Type: {\"multipart/alternative\"}; boundary=\"$bound_text\"";
 
 $message .= 	"If you can see this MIME than your client doesn't accept MIME types!\r\n"
   	.$bound;
